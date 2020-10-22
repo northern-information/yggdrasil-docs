@@ -1,2 +1,30 @@
-nav.container-fluid
-  margin-top: 10px
+$black: #000000
+$white: #FFFFFF
+$yellow: #FFFF00
+
+.sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
+
+.monospace
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+
+body 
+  @extend .sans-serif
+  font-size: 1rem
+  color: $white
+  background: $black
+
+p
+  a, a:link, a:visited
+    color: $yellow
+    text-decoration: underline
+
+  a:hover, a:active
+    color: $white
+
+hr
+  border-top: 5px $yellow solid
+
+.ni
+  width: 100px
+

@@ -1,7 +1,6 @@
-title: perfect bootstrap jekyll
-description: the perfect bootstrap jekyll starting theme. xoxo northern information.
-baseurl: /perfect-bootstrap-jekyll
-url: https://tyleretters.github.io/perfect-bootstrap-jekyll
+title: "Yggdrasil"
+baseurl: /
+url: https://tyleretters.github.io/yggdrasil-docs
 permalink: pretty
 sort_by: year, month
 markdown: kramdown
@@ -12,4 +11,4 @@ plugins:
 include: ['_pages']
 collections_dir: collections
 collections:
-  - examples
+  - commands

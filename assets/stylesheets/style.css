@@ -1,4 +1,24 @@
-nav.container-fluid {
-  margin-top: 10px; }
+.sans-serif, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+
+.monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+body {
+  font-size: 1rem;
+  color: #FFFFFF;
+  background: #000000; }
+
+p a, p a:link, p a:visited {
+  color: #FFFF00;
+  text-decoration: underline; }
+p a:hover, p a:active {
+  color: #FFFFFF; }
+
+hr {
+  border-top: 5px #FFFF00 solid; }
+
+.ni {
+  width: 100px; }
 
 /*# sourceMappingURL=style.css.map */

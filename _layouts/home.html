@@ -1,4 +1,31 @@
 ---
 layout: default
 ---
-{{ content }}
+<div class="row">
+  <div class="col-md-6 offset-md-3 col-sm-12">
+    <hr>
+    <p>Plug in a US-ANSI keyboard. You're ready.<p>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-md-6 offset-md-3 col-sm-12">
+    <ul id="collection">
+      {% assign commands_by_order = site.commands | sort: "order" %}
+      {% for command in commands_by_order %}
+        <li>
+          <h2>{{ command.name }}</h2>
+          <ul>
+            {% for attribute in command.attributes %}
+            <li>{{ attribute }}</li>
+            {% endfor %}
+          </ul>
+          <p>{{ command.content | markdownify }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
