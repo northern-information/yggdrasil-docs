@@ -24,9 +24,10 @@ code, pre {
 hr {
   border-top: 5px #FFFF00 solid; }
 
-table tr th {
-  color: #FFFFFF; }
-table tr td {
+.table tr th {
+  color: #FFFFFF;
+  border-top: none; }
+.table tr td {
   color: #FFFFFF; }
 
 .ni {

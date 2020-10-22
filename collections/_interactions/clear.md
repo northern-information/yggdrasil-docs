@@ -3,4 +3,4 @@ weight: 1
 name: Clear
 keyboard: ['backspace']
 ---
-Clear all values from focused slot.
+Clear all values from the focused slot or column.

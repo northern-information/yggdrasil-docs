@@ -1,7 +1,7 @@
 ---
-weight: 1
+weight: 2
 name: Play
 format: play
 example: none
 ---
-Start playback.
+Start playback. This can also be accomplished with norns button 2.

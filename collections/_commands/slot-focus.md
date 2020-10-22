@@ -1,6 +1,6 @@
 ---
 weight: 1
-name: Focus
+name: Slot Focus
 format: X Y
 example: 7 8
 ---

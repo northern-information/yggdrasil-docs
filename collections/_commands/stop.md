@@ -1,7 +1,7 @@
 ---
-weight: 1
+weight: 2
 name: Stop
 format: stop
 example: none
 ---
-Stop playback.
+Stop playback. This can also be accomplished with norns button 2.
