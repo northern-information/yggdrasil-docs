@@ -15,8 +15,19 @@ p a, p a:link, p a:visited {
 p a:hover, p a:active {
   color: #FFFFFF; }
 
+code, pre {
+  border-radius: 2px;
+  padding: 2px;
+  background: #FFFF00;
+  color: #000000; }
+
 hr {
   border-top: 5px #FFFF00 solid; }
+
+table tr th {
+  color: #FFFFFF; }
+table tr td {
+  color: #FFFFFF; }
 
 .ni {
   width: 100px; }

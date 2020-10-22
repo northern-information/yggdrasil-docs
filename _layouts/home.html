@@ -2,30 +2,67 @@
 layout: default
 ---
 <div class="row">
-  <div class="col-md-6 offset-md-3 col-sm-12">
+  <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
+    <h1 class="my-5">Setup</h1>
     <p>Plug in a US-ANSI keyboard. You're ready.<p>
   </div>
 </div>
 
-
-
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-sm-12">
+    <hr>
+    <h1 class="my-5">Interactions</h1>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">Keys</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        {% assign interactions_by_weight = site.interactions | sort: "weight" %}
+        {% for interaction in interactions_by_weight %}
+          <tr>
+            <th scope="row">{{ interaction.name }}</th>
+            <td>
+              {% for key in interaction.keyboard %}
+              <code>{{ key }}</code>
+              {% endfor %}
+            </td>
+            <td>{{ interaction.content | markdownify }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
 
 <div class="row">
-  <div class="col-md-6 offset-md-3 col-sm-12">
-    <ul id="collection">
-      {% assign commands_by_order = site.commands | sort: "order" %}
-      {% for command in commands_by_order %}
-        <li>
-          <h2>{{ command.name }}</h2>
-          <ul>
-            {% for attribute in command.attributes %}
-            <li>{{ attribute }}</li>
-            {% endfor %}
-          </ul>
-          <p>{{ command.content | markdownify }}</p>
-        </li>
-      {% endfor %}
-    </ul>
+  <div class="col-md-10 offset-md-1 col-sm-12">
+    <hr>
+    <h1 class="my-5">Commands</h1>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">Format</th>
+            <th scope="col">Example</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        {% assign commands_by_weight = site.commands | sort: "weight" %}
+        {% for command in commands_by_weight %}
+          <tr>
+            <th scope="row">{{ command.name }}</th>
+            <td class="text-nowrap"><code>{{ command.format }} &crarr;&nbsp;</code></td>
+            <td class="text-nowrap">{% if command.example == "none" %}{% else %}<code>{{ command.example }}</code>{% endif %}</td>
+            <td>{{ command.content | markdownify }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
   </div>
 </div>
