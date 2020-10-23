@@ -1,7 +1,7 @@
 # Yggdrasil Docs
 
-Docs: [https://northern-information.github.io/yggdrasil-docs/](https://northern-information.github.io/yggdrasil-docs)
-norns Repo: [https://github.com/northern-information/yggdrasil](https://github.com/northern-information/yggdrasil)
+- Docs: [https://northern-information.github.io/yggdrasil-docs/](https://northern-information.github.io/yggdrasil-docs)
+- norns Repo: [https://github.com/northern-information/yggdrasil](https://github.com/northern-information/yggdrasil)
 
 ## Setup Instructions
 
