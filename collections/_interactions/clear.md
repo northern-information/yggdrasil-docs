@@ -1,6 +1,6 @@
 ---
-weight: 1
-name: Clear
-keyboard: ['backspace']
+weight: 2
+name: HUD
+keyboard: ['caps lock']
 ---
-Clear all values from the focused slot or column.
+Toggle the heads-up display: row numbers, column numbers.
