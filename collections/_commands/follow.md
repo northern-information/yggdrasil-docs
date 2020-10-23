@@ -2,6 +2,6 @@
 weight: 5
 name: Follow
 format: follow
-example:
+example: none
 ---
-Follow the tracker.
+Toggle following the tracker on or off
