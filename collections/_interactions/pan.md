@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 3
 name: Pan
 keyboard: ['shift', '&uarr;', '&rarr;', '&darr;', '&rarr;']
 ---
