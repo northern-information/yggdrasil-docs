@@ -37,4 +37,9 @@ hr {
 .ni {
   width: 100px; }
 
+.btn-light {
+  background: #FFFFFF; }
+  .btn-light:hover {
+    background: #FFFF00; }
+
 /*# sourceMappingURL=style.css.map */

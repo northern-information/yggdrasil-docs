@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 10
 name: Play
 format: play
 example: none

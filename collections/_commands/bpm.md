@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 5
 name: BPM
 format: bpm VALUE
 example: bpm 149
