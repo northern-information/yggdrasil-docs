@@ -1,8 +1,8 @@
 ---
 weight: 3
 name: End
-format: X Y x
+signature: X Y x
 example: 1 5 x
 category: musical
 ---
-Slot an "end" phenomenon. This causes playback to wrap back to the top of the track.
+Slot an "end" phenomenon. This causes playback to wrap back to the top of the track. (The end phenomenon signature is simply the letter `x`.)

@@ -1,7 +1,7 @@
-.sans-serif, body {
+.sans-serif, body, .tagline em {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
 
-.monospace {
+.monospace, code, pre, em {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 body {
@@ -25,10 +25,19 @@ ul {
     padding-left: 20px; }
 
 code, pre {
+  color: #FFFF00; }
+
+em {
+  font-style: normal;
   border-radius: 2px;
-  padding: 2px;
+  padding: 2px 8px;
   background: #FFFF00;
   color: #000000; }
+
+.tagline em {
+  background: #000000;
+  font-style: italic;
+  color: #FFFFFF; }
 
 hr {
   border-top: 5px #FFFF00 solid; }

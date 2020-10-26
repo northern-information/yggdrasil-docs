@@ -1,7 +1,7 @@
 ---
 weight: 10
 name: Screenshot
-format: screenshot
+signature: screenshot
 example: none
 category: utility
 ---

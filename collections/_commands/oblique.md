@@ -1,7 +1,7 @@
 ---
 weight: 12
 name: Oblique
-format: oblique
+signature: oblique
 example: none
 category: utility
 ---

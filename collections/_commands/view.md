@@ -1,7 +1,7 @@
 ---
 weight: 3
 name: View
-format: view VALUE
+signature: view VALUE
 example: view midi
 category: view
 ---

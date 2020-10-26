@@ -3,4 +3,4 @@ weight: 2
 name: History
 keyboard: ['&uarr;','&darr;']
 ---
-Press the <code>&uarr;</code> and <code>&darr;</code> keys to scroll through command history.
+Press the <em>&uarr;</em> and <em>&darr;</em> keys to scroll through command history.

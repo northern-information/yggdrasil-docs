@@ -1,22 +1,22 @@
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12 mb-5">
-    <h2 id="{{ title | downcase }}-commands">{{ title }} Commands</h2>
+    <h2 id="{{ title | downcase }}-commands" class="my-0">{{ title }} Commands</h2>
     <div class="table-responsive">
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">Signature</th>
-            <th scope="col">Example</th>
-            <th scope="col">Description</th>
+            <th scope="col" class="w-10">&nbsp;</th>
+            <th scope="col" class="w-50">&nbsp;</th>
+            <th scope="col" class="w-20 text-right">Signature</th>
+            <th scope="col" class="w-20 text-right">Example</th>
           </tr>
         </thead>
         {% for command in commands %}
           <tr>
             <td class="w-10"><strong>{{ command.name }}</strong></td>
-            <td class="w-20" class="text-nowrap"><code>{{ command.format }} &crarr;&nbsp;</code></td>
-            <td class="w-20" class="text-nowrap">{% if command.example == "none" %}{% else %}<code>{{ command.example }}  &crarr;&nbsp;</code>{% endif %}</td>
             <td class="w-50">{{ command.content | markdownify }}</td>
+            <td class="w-20 text-right"><code>{{ command.signature }}</code>&nbsp;<em>&crarr;</em></td>
+            <td class="w-20 text-right">{% if command.example == "none" %}{% else %}<code>{{ command.example }}</code>&nbsp;<em>&crarr;</em>{% endif %}</td>
           </tr>
         {% endfor %}
       </table>

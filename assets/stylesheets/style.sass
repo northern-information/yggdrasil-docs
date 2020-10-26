@@ -33,10 +33,22 @@ ul
     padding-left: 20px
 
 code, pre
+  @extend .monospace
+  color: $yellow
+
+em
+  @extend .monospace
+  font-style: normal
   border-radius: 2px
-  padding: 2px
+  padding: 2px 8px
   background: $yellow
   color: $black
+
+.tagline em
+  @extend .sans-serif
+  background: $black
+  font-style: italic
+  color: $white
 
 hr
   border-top: 5px $yellow solid

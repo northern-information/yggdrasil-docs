@@ -1,7 +1,7 @@
 ---
 weight: 4
 name: Track Depth
-format: X depth;VALUE
+signature: X depth;VALUE
 example: 1 depth;8
 category: core
 ---

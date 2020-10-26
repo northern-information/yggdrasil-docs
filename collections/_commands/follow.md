@@ -1,7 +1,7 @@
 ---
 weight: 11
 name: Follow
-format: follow
+signature: follow
 example: none
 category: view
 ---
