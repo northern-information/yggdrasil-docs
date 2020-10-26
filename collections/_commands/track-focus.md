@@ -1,7 +1,7 @@
 ---
 weight: 1
-name: Column Focus
+name: Track Focus
 format: X 
 example: 2
 ---
-Focus on a column.
+Focus on a track.
