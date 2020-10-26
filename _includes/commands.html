@@ -13,10 +13,10 @@
         </thead>
         {% for command in commands %}
           <tr>
-            <td><strong>{{ command.name }}</strong></td>
-            <td class="text-nowrap"><code>{{ command.format }} &crarr;&nbsp;</code></td>
-            <td class="text-nowrap">{% if command.example == "none" %}{% else %}<code>{{ command.example }}  &crarr;&nbsp;</code>{% endif %}</td>
-            <td>{{ command.content | markdownify }}</td>
+            <td class="w-10"><strong>{{ command.name }}</strong></td>
+            <td class="w-20" class="text-nowrap"><code>{{ command.format }} &crarr;&nbsp;</code></td>
+            <td class="w-20" class="text-nowrap">{% if command.example == "none" %}{% else %}<code>{{ command.example }}  &crarr;&nbsp;</code>{% endif %}</td>
+            <td class="w-50">{{ command.content | markdownify }}</td>
           </tr>
         {% endfor %}
       </table>

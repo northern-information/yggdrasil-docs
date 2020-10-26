@@ -90,13 +90,13 @@ layout: default
         {% assign interactions_by_weight = site.interactions | sort: "weight" %}
         {% for interaction in interactions_by_weight %}
           <tr>
-            <td><strong>{{ interaction.name }}</strong></td>
-            <td>
+            <td class="w-25"><strong>{{ interaction.name }}</strong></td>
+            <td class="w-25">
               {% for key in interaction.keyboard %}
               <code>{{ key }}</code>
               {% endfor %}
             </td>
-            <td>{{ interaction.content | markdownify }}</td>
+            <td class="w-50">{{ interaction.content | markdownify }}</td>
           </tr>
         {% endfor %}
       </table>

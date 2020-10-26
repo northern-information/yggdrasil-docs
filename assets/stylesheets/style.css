@@ -47,4 +47,10 @@ hr {
   .btn-light:hover {
     background: #FFFF00; }
 
+.w-10 {
+  width: 10% !important; }
+
+.w-20 {
+  width: 20% !important; }
+
 /*# sourceMappingURL=style.css.map */
