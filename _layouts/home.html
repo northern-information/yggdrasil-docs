@@ -14,7 +14,14 @@ layout: default
         <h1 class="my-5">Index</h1>
         <ul>
           <li><a href="#abstract">Abstract</a></li>
-          <li><a href="#commands">Commands</a></li>
+          <li><a href="#commands">Commands</a>
+            <ul>
+              <li><a href="#core-commands">Core</a>
+              <li><a href="#musical-commands">Musical</a>
+              <li><a href="#view-commands">View</a>
+              <li><a href="#utility-commands">Utility</a>
+            </ul>
+          </li>
           <li><a href="#interactions">Interactions</a></li>
           <li><a href="#learn">Learn</a></li>
           <li><a href="#philosophy">Philosophy</a></li>
@@ -45,30 +52,27 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="commands" class="my-5">Commands</h1>
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">Signature</th>
-            <th scope="col">Example</th>
-            <th scope="col">Description</th>
-          </tr>
-        </thead>
-        {% assign commands_by_weight = site.commands | sort: "weight" %}
-        {% for command in commands_by_weight %}
-          <tr>
-            <td><strong>{{ command.name }}</strong></td>
-            <td class="text-nowrap"><code>{{ command.format }} &crarr;&nbsp;</code></td>
-            <td class="text-nowrap">{% if command.example == "none" %}{% else %}<code>{{ command.example }}  &crarr;&nbsp;</code>{% endif %}</td>
-            <td>{{ command.content | markdownify }}</td>
-          </tr>
-        {% endfor %}
-      </table>
-    </div>
+    <h1 id="commands" class="my-5">Commands<h1>
   </div>
 </div>
+
+
+{% assign commands = site.commands | sort: "weight" | where: "category", "core" %}
+{% assign title = "Core" %}
+{% include commands.html %}
+
+{% assign commands = site.commands | sort: "weight" | where: "category", "musical" %}
+{% assign title = "Musical" %}
+{% include commands.html %}
+
+{% assign commands = site.commands | sort: "weight" | where: "category", "view" %}
+{% assign title = "View" %}
+{% include commands.html %}
+
+{% assign commands = site.commands | sort: "weight" | where: "category", "utility" %}
+{% assign title = "Utility" %}
+{% include commands.html %}
+
 
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">

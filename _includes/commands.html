@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-sm-12 mb-5">
+    <h2 id="{{ title | downcase }}-commands">{{ title }} Commands</h2>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">Signature</th>
+            <th scope="col">Example</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        {% for command in commands %}
+          <tr>
+            <td><strong>{{ command.name }}</strong></td>
+            <td class="text-nowrap"><code>{{ command.format }} &crarr;&nbsp;</code></td>
+            <td class="text-nowrap">{% if command.example == "none" %}{% else %}<code>{{ command.example }}  &crarr;&nbsp;</code>{% endif %}</td>
+            <td>{{ command.content | markdownify }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>

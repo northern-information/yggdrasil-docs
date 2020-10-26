@@ -9,6 +9,9 @@ body {
   color: #FFFFFF;
   background: #000000; }
 
+h2 {
+  color: #FFFF00; }
+
 p a, p a:link, p a:visited, li a, li a:link, li a:visited {
   color: #FFFF00;
   text-decoration: underline; }
@@ -18,6 +21,8 @@ p a:hover, p a:active, li a:hover, li a:active {
 ul {
   list-style: inside;
   padding: 0; }
+  ul ul {
+    padding-left: 20px; }
 
 code, pre {
   border-radius: 2px;
