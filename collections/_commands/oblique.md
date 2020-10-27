@@ -4,5 +4,6 @@ name: Oblique
 signature: oblique
 example: none
 category: utility
+phenomenon: none
 ---
 Draw an oblique strategy.

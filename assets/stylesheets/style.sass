@@ -25,6 +25,9 @@ p, li
   a:hover, a:active
     color: $white
 
+.fas
+  color: $black
+
 ul
   list-style: inside
   padding: 0
@@ -76,6 +79,49 @@ hr
 .w-20
   width: 20%!important
 
-
 .w-40
   width: 40%!important
+
+.phenomenon
+    @extend .monospace
+    color: $black
+    border-radius: 4px
+    padding: 5px
+    background: linear-gradient(182deg, lighten($yellow, 20%), $yellow)
+    background-size: 400% 400%
+    -webkit-animation: phenomenon 4s ease infinite
+    -moz-animation: phenomenon 4s ease infinite
+    -o-animation: phenomenon 4s ease infinite
+    animation: phenomenon 4s ease infinite
+
+@-webkit-keyframes phenomenon
+    0%
+      background-position: 42% 0%
+    50%
+      background-position: 59% 100%
+    100%
+      background-position: 42% 0%
+
+@-moz-keyframes phenomenon 
+    0%
+      background-position: 42% 0%
+    50%
+      background-position: 59% 100%
+    100%
+      background-position: 42% 0%
+
+@-o-keyframes phenomenon 
+    0%
+      background-position: 42% 0%
+    50%
+      background-position: 59% 100%
+    100%
+      background-position: 42% 0%
+
+@keyframes phenomenon 
+    0%
+      background-position: 42% 0%
+    50%
+      background-position: 59% 100%
+    100%
+      background-position: 42% 0%

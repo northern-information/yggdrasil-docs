@@ -4,5 +4,6 @@ name: View
 signature: view VALUE
 example: view midi
 category: view
+phenomenon: none
 ---
 Change the view of each slot. Possible values are `midi`, `ygg`, `freq`, and `ipn` for notes. `index` is also available.
