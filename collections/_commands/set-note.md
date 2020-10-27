@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 1
 name: Set MIDI
 signature: X Y MIDI_NOTE
 example: 4 3 72
