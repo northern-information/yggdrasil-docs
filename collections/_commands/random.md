@@ -6,4 +6,4 @@ example: 1 5 ?
 category: musical
 phenomenon: "?"
 ---
-Slot a "random" phenomenon. This causes playback to jump to a random slot in the track. (The random phenomenon signature is the `?` character.)
+Slot a "random" phenomenon. This causes playback to jump to a random slot in the track. The random phenomenon character is the `?` symbol.

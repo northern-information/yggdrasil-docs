@@ -16,8 +16,8 @@ layout: default
           <li><a href="#abstract">Abstract</a></li>
           <li><a href="#commands">Commands</a>
             <ul>
-              <li><a href="#core">Core</a>
               <li><a href="#musical">Musical</a>
+              <li><a href="#core">Core</a>
               <li><a href="#view">View</a>
               <li><a href="#utility">Utility</a>
             </ul>
@@ -56,13 +56,12 @@ layout: default
   </div>
 </div>
 
+{% assign commands = site.commands | sort: "weight" | where: "category", "musical" %}
+{% assign title = "Musical" %}
+{% include commands.html %}
 
 {% assign commands = site.commands | sort: "weight" | where: "category", "core" %}
 {% assign title = "Core" %}
-{% include commands.html %}
-
-{% assign commands = site.commands | sort: "weight" | where: "category", "musical" %}
-{% assign title = "Musical" %}
 {% include commands.html %}
 
 {% assign commands = site.commands | sort: "weight" | where: "category", "view" %}

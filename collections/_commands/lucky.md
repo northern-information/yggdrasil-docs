@@ -6,4 +6,4 @@ example: 1 5 !
 category: musical
 phenomenon: "!"
 ---
-Slot a "lucky" phenomenon. This causes playback to jump to a random and not empty slot in the track. (The lucky phenomenon signature is the `!` character.)
+Slot a "lucky" phenomenon. This causes playback to jump to a random and not empty slot in the track. The lucky phenomenon character is the `!` symbol.

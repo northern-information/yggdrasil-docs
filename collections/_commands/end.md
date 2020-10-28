@@ -6,4 +6,4 @@ example: 1 5 x
 category: musical
 phenomenon: "x"
 ---
-Slot an "end" phenomenon. This causes playback to wrap back to the top of the track. (The end phenomenon signature is simply the letter `x`.)
+Slot an "end" phenomenon. This causes playback to wrap back to the top of the track. The end phenomenon character the letter `x`.
