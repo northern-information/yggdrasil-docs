@@ -14,7 +14,7 @@
         {% for command in commands %}
           <tr>
             <td class="w-10 text-center">{% if command.phenomenon == "none" %}{% else %}<h3 class="phenomenon">{{ command.phenomenon }}</h3>{% endif %}<strong>{{ command.name }}</strong></td>
-            <td class="w-40">{{ command.content | markdownify }}</td>
+            <td class="w-40">{{ command.usage | markdownify }}</td>
             <td class="w-25 text-right"><code>{{ command.signature }}</code>&nbsp;<em>&crarr;</em></td>
             <td class="w-25 text-right">{% if command.example == "none" %}{% else %}<code>{{ command.example }}</code>&nbsp;<em>&crarr;</em>{% endif %}</td>
           </tr>
