@@ -4,9 +4,5 @@ name: Track Focus
 signature: X 
 example: 2
 category: view
-phenomenon: none
-usage: 
-description: 
-aliases: 
+description: Focus on a track.
 ---
-Focus on a track.

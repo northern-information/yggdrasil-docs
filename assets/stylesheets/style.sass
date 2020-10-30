@@ -25,23 +25,32 @@ p, li
   a:hover, a:active
     color: $white
 
-.col-command
-  // border: 1px solid $white
-  // padding: 20px
-  border-radius: 4px
+.text-italic
+  font-style: italic
 
-  .command-title
-    h3
-      padding-right: 20px
-      vertical-align: baseline !important
-      display: inline-block
-    p
-      font-style: italic
-      vertical-align: baseline !important
-      display: inline-block
+.text-big
+  font-size: 2rem
 
 .fas
   color: $black
+
+.container-command
+  border: 4px solid $white
+
+  h1 span
+    font-size: 1rem
+    color: $yellow 
+    letter-spacing: .5rem
+
+.row-command-body
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  h4
+    display: inline-block
+    margin-bottom: 0
 
 ul
   list-style: inside
@@ -61,12 +70,6 @@ em
   padding: 2px 8px
   background: $yellow
   color: $black
-
-.tagline em
-  @extend .sans-serif
-  background: $black
-  font-style: italic
-  color: $white
 
 .text-italic
   font-style: italic
@@ -100,26 +103,43 @@ hr
 .w-40
   width: 40%!important
 
-.phenomenon
-    @extend .monospace
-    text-align: center
-    width: 50px
-    height: 50px
-    display: inline-block
-    font-size: 2em
-    margin-right: 20px
-    margin-bottom: 10px
-    color: $black
-    border-radius: 4px
-    padding: 5px
-    background: linear-gradient(182deg, lighten($yellow, 20%), $yellow)
-    background-size: 400% 400%
-    -webkit-animation: phenomenon 4s ease infinite
-    -moz-animation: phenomenon 4s ease infinite
-    -o-animation: phenomenon 4s ease infinite
-    animation: phenomenon 4s ease infinite
+.mb-10
+  margin-bottom: 6rem!important
 
-@-webkit-keyframes phenomenon
+.command-icon-abstract
+  @extend .monospace
+  text-align: center
+  width: 100px
+  height: 100px
+  display: inline-block
+  font-size: 2em
+  margin-right: 20px
+  margin-bottom: 10px
+  color: $black
+  padding: 5px
+
+.command-icon
+  @extend .command-icon-abstract
+  background: $white
+
+  i
+    padding-top: 40px 
+   
+  p 
+    .phenomenon
+      font-style: normal
+      font-size: 4rem
+
+.command-icon-animated
+  @extend .command-icon-abstract
+  background: linear-gradient(182deg, lighten($yellow, 20%), $yellow)
+  background-size: 400% 400%
+  -webkit-animation: phenomenonAnimation 4s ease infinite
+  -moz-animation: phenomenonAnimation 4s ease infinite
+  -o-animation: phenomenonAnimation 4s ease infinite
+  animation: phenomenonAnimation 4s ease infinite
+
+@-webkit-keyframes phenomenonAnimation
     0%
       background-position: 42% 0%
     50%
@@ -127,7 +147,7 @@ hr
     100%
       background-position: 42% 0%
 
-@-moz-keyframes phenomenon 
+@-moz-keyframes phenomenonAnimation 
     0%
       background-position: 42% 0%
     50%
@@ -135,7 +155,7 @@ hr
     100%
       background-position: 42% 0%
 
-@-o-keyframes phenomenon 
+@-o-keyframes phenomenonAnimation 
     0%
       background-position: 42% 0%
     50%
@@ -143,7 +163,7 @@ hr
     100%
       background-position: 42% 0%
 
-@keyframes phenomenon 
+@keyframes phenomenonAnimation 
     0%
       background-position: 42% 0%
     50%

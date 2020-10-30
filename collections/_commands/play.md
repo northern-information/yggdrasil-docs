@@ -2,11 +2,6 @@
 weight: 1
 name: Play
 signature: play
-example: none
 category: core
-phenomenon: none
-usage: 
-description: 
-aliases: 
+description: Start playback. This can also be accomplished with _spacebar_ and norns button 2.
 ---
-Start playback. This can also be accomplished with norns button 2 and _spacebar_.

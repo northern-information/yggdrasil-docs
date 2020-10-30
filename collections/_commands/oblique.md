@@ -2,11 +2,6 @@
 weight: 12
 name: Oblique
 signature: oblique
-example: none
 category: utility
-phenomenon: none
-usage: 
-description: 
-aliases: 
+description: Draw an oblique strategy.
 ---
-Draw an oblique strategy.

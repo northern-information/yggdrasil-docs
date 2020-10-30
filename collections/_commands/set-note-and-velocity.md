@@ -1,12 +1,9 @@
 ---
 weight: 1.1
-name: Set MIDI and Velocity
-signature: X Y MIDI_NOTE vel;VALUE
-example: 4 3 72 vel;127
+name: Set Note and Velocity
+signature: X Y MIDI_NOTE velocity;VALUE
+example: 4 3 72 velocity;127
 category: musical
-phenomenon: none
-usage: 
-description: 
-aliases: 
+description: Set a slot's MIDI and velocity values.
+aliases: ["velocity", "vel", "v"]
 ---
-Set a slot's MIDI and velocity values.

@@ -4,9 +4,5 @@ name: Slot Focus
 signature: X Y
 example: 7 8
 category: view
-phenomenon: none
-usage: 
-description: 
-aliases: 
+description: Focus on a slot.
 ---
-Focus on a slot.

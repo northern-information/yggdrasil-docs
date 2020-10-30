@@ -1,42 +1,54 @@
 <div class="row">
-  <div class="col-md-10 offset-md-1 col-sm-12 mb-5">
-    <h2 id="{{ title | downcase }}" class="my-0">{{ title }}</h2>
-    <div class="container-fluid">
+  <div class="col-md-10 offset-md-1 col-sm-12">
+    <hr>
+    <h1 id="{{ title | downcase }}" class="my-5">{{ title }} Commands</h1>
       {% for command in commands %}
-      <div class="row my-5">
-        <div class="col-md-12 col-command">
-          <div class="command-title">
-            {% if command.phenomenon == "none" %}{% else %}<div class="phenomenon">{{ command.phenomenon }}</div>{% endif %}<strong></strong>
-            <h3>{{ command.name }}</h3> {{ command.description | markdownify }}
+      <div class="container-fluid container-command my-5">
+        <div class="row my-3 row-command-title">
+          <div class="col-md-2">
+            {% if command.phenomenon and command.phenomenon != blank %}
+            <div class="command-icon command-icon-animated"><p><span class="phenomenon">{{ command.phenomenon }}</span></p></div>
+            {% else %}
+            <div class="command-icon"><p><i class="fas fa-terminal"></i></p></div>
+            {% endif %}
           </div>
-          <div class="table-responsive">
-            <table class="table">
-              <tr>
-                <td class="w-10 text-right">Signature</td>
-                <td><code>{{ command.signature }}</code>&nbsp;<em>&crarr;</em></td>
-              </td>
-              {% if command.example == "none" %}{% else %}
-              <tr>
-                <td class="w-10 text-right">Example</td>
-                <td><code>{{ command.example }}</code>&nbsp;<em>&crarr;</em></td>
-              </td>
-              {% endif %}
-              <tr>
-                <td class="w-10 text-right">Usage</td>
-                <td>{{ command.usage | markdownify }}</td>
-              </td>
-              {% if command.aliases and command.aliases != blank %}
-              <tr>
-                <td class="w-10 text-right">Aliases</td>
-                {% assign aliases = command.aliases %}
-                <td><ul>{% for alias in aliases%}<li><code>{{ alias }}</code></li>{% endfor %}</ul></td>
-              </td>
-              {% endif %}
-              </table>
-            </div>
+          <div class="col-md-8">
+            <h1>{{ command.name }}{% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}</h1>
+            {{ command.description | markdownify }}
           </div>
         </div>
+        <div class="row my-3 row-command-body">
+          <div class="col-md-8 offset-md-2">        
+            <span class="text-big"><code>{{ command.signature }}</code>&nbsp;&nbsp;<em>&crarr;</em></span>
+            <p class="text-italic">Signature</p>
+          </div>
+        </div>
+        {% if  command.example and command.example != blank %}
+        <div class="row my-3 row-command-body">
+          <div class="col-md-8 offset-md-2">        
+            <span class="text-big"><code>{{ command.example }}</code>&nbsp;<em>&crarr;</em></span>
+            <p class="text-italic">Example</p>
+          </div>
+        </div>
+        {% endif %}
+        {% if command.usage and command.usage != blank %}
+        <div class="row my-3 row-command-body">
+          <div class="col-md-8 offset-md-2">        
+            <span class="usage">{{ command.usage | markdownify }}</span>
+            <p>Usage</p>
+          </div>
+        </div>
+        {% endif %}
+        {% if command.aliases and command.aliases != blank %}
+        <div class="row my-3 row-command-body">
+          <div class="col-md-8 offset-md-2">        
+            {% assign aliases = command.aliases %}
+            <ul>{% for alias in aliases%}<li><code>{{ alias }}</code></li>{% endfor %}</ul>
+            <p>Aliases</p>
+          </div>
+        </div>
+        {% endif %}
+      </div> 
       {% endfor %}
-    </div>
   </div>
 </div>

@@ -4,9 +4,6 @@ name: Shift
 signature: X shift;VALUE
 example: 1 shift;3
 category: musical
-phenomenon: none
-usage: 
-description: 
-aliases: 
+description: Shift down (or up; value can be negative) a track's slots by a value. Slots wrap.
+aliases: ["shift", "s"]
 ---
-Shift a track's slots by a value. Value can be negative. Slots wrap.

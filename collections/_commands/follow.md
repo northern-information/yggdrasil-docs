@@ -2,11 +2,6 @@
 weight: 11
 name: Follow
 signature: follow
-example: none
 category: view
-phenomenon: none
-usage: 
-description: 
-aliases: 
+description: Toggle following the tracker on or off. Follows the lowest and right-most slot.
 ---
-Toggle following the tracker on or off
