@@ -25,6 +25,21 @@ p, li
   a:hover, a:active
     color: $white
 
+.col-command
+  // border: 1px solid $white
+  // padding: 20px
+  border-radius: 4px
+
+  .command-title
+    h3
+      padding-right: 20px
+      vertical-align: baseline !important
+      display: inline-block
+    p
+      font-style: italic
+      vertical-align: baseline !important
+      display: inline-block
+
 .fas
   color: $black
 
@@ -52,6 +67,9 @@ em
   background: $black
   font-style: italic
   color: $white
+
+.text-italic
+  font-style: italic
 
 hr
   border-top: 5px $yellow solid
@@ -84,6 +102,13 @@ hr
 
 .phenomenon
     @extend .monospace
+    text-align: center
+    width: 50px
+    height: 50px
+    display: inline-block
+    font-size: 2em
+    margin-right: 20px
+    margin-bottom: 10px
     color: $black
     border-radius: 4px
     padding: 5px

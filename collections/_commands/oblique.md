@@ -5,5 +5,8 @@ signature: oblique
 example: none
 category: utility
 phenomenon: none
+usage: 
+description: 
+aliases: 
 ---
 Draw an oblique strategy.

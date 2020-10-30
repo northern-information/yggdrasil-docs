@@ -7,7 +7,7 @@ category: musical
 phenomenon: none
 usage: "`t;VALUE` is the transpose command, where `VALUE` is a positive or negative integer."
 description: Transpose a slot up or down by semitones.
-aliases: "`transpose` `t`"
+aliases: ["transpose", "t"]
 ---
 
 
