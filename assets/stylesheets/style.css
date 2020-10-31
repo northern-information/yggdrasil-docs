@@ -36,6 +36,10 @@ p a:hover, p a:active, li a:hover, li a:active {
       color: #FFFF00;
       letter-spacing: 0.5rem; }
 
+@media (max-width: 576px) {
+  .container-command h1 span {
+    display: block;
+    margin-bottom: 0.5rem; } }
 .row-command-body ul {
   margin: 0;
   padding: 0;
