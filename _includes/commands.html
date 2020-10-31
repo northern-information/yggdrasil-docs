@@ -17,26 +17,26 @@
             {{ command.description | markdownify }}
           </div>
         </div>
-        <div class="row my-3 row-command-body">
-          <div class="col-md-8 offset-md-2">        
-            <span class="text-big"><code>{{ command.signature }}</code>&nbsp;&nbsp;<em>&crarr;</em></span>
-            <p class="text-italic">Signature</p>
+        <div class="row my-5 row-command-body">
+          <div class="col-md-8 offset-md-2">
+            <h2>Signature{% if command.examples.size > 1 %}s{% endif %}</h2>
+            {% for signature in command.signatures%}<p class="text-big"><code>{{ signature }}</code>&nbsp;&nbsp;<em>&crarr;</em><p>{% endfor %}
           </div>
         </div>
-        {% if  command.example and command.example != blank %}
-        <div class="row my-3 row-command-body">
-          <div class="col-md-8 offset-md-2">        
-            <span class="text-big"><code>{{ command.example }}</code>&nbsp;<em>&crarr;</em></span>
-            <p class="text-italic">Example</p>
+        {% if  command.examples and command.examples != blank %}
+        <div class="row my-5 row-command-body">
+          <div class="col-md-8 offset-md-2">
+            <h2>Example{% if command.examples.size > 1 %}s{% endif %}</h2>
+            {% for example in command.examples%}<p class="text-big"><code>{{ example }}</code>&nbsp;&nbsp;<em>&crarr;</em><p>{% endfor %}
           </div>
         </div>
         {% endif %}
         {% if command.invocations and command.invocations != blank %}
-        <div class="row my-3 row-command-body">
-          <div class="col-md-8 offset-md-2">        
+        <div class="row my-5 row-command-body">
+          <div class="col-md-8 offset-md-2">
+            <h2>Invocation{% if command.invocations.size > 1 %}s{% endif %}</h2>
             {% assign invocations = command.invocations %}
             <ul>{% for invocation in invocations%}<li><code>{{ invocation }}</code></li>{% endfor %}</ul>
-            <p class="text-italic">Invocations</p>
           </div>
         </div>
         {% endif %}

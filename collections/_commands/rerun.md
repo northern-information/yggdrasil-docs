@@ -1,7 +1,7 @@
 ---
 weight: 11
 name: Rerun
-signature: rerun
+signatures: ["rerun"]
 category: utility
 description: Calls `norns.script.load(norns.state.script)`.
 ---

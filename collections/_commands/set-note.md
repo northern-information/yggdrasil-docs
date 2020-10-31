@@ -1,8 +1,8 @@
 ---
 weight: 1
 name: Set Note
-signature: X Y MIDI_NOTE
-example: 4 3 72
+signatures: ["X Y MIDI_NOTE"]
+examples: ["4 3 72"]
 category: musical
 description: Set a slot's MIDI value.
 ---

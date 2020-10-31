@@ -1,7 +1,7 @@
 ---
 weight: 12
 name: Oblique
-signature: oblique
+signatures: ["oblique"]
 category: utility
 description: Draw an oblique strategy.
 ---

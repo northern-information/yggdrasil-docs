@@ -29,24 +29,23 @@ p a:hover, p a:active, li a:hover, li a:active {
 
 .container-command {
   border: 4px solid #FFFFFF; }
-  .container-command h1 span {
-    font-size: 1rem;
-    color: #FFFF00;
-    letter-spacing: 0.5rem; }
+  .container-command h1 {
+    border-bottom: 1px solid #FFFFFF; }
+    .container-command h1 span {
+      font-size: 1rem;
+      color: #FFFF00;
+      letter-spacing: 0.5rem; }
 
 .row-command-body ul {
   margin: 0;
   padding: 0;
   list-style: none; }
-.row-command-body h4 {
-  display: inline-block;
-  margin-bottom: 0; }
-
-ul {
-  list-style: inside;
-  padding: 0; }
-  ul ul {
-    padding-left: 20px; }
+.row-command-body h2 {
+  font-style: italic;
+  font-size: 1rem;
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 0.5rem;
+  color: #FFFFFF; }
 
 code, pre {
   color: #FFFF00; }
@@ -62,7 +61,7 @@ em {
   font-style: italic; }
 
 hr {
-  border-top: 5px #FFFF00 solid; }
+  border-top: 4px #FFFF00 solid; }
 
 .table tr th {
   color: #FFFFFF;
