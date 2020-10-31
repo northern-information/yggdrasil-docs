@@ -6,5 +6,5 @@ example: 1 5 random
 category: musical
 phenomenon: "?"
 description: Slot a "random" phenomenon. This causes playback to jump to a random slot in the track.
-aliases: ["random", "?"]
+invocations: ["random", "?"]
 ---

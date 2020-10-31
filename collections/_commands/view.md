@@ -5,5 +5,5 @@ signature: view VALUE
 example: view midi
 category: view
 description: Change the view of each slot. Possible values are `midi`, `ygg`, `freq`, and `ipn` for notes. `index` is also available.
-aliases: ["view", "v"]
+invocations: ["view", "v"]
 ---

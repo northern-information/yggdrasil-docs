@@ -31,20 +31,12 @@
           </div>
         </div>
         {% endif %}
-        {% if command.usage and command.usage != blank %}
+        {% if command.invocations and command.invocations != blank %}
         <div class="row my-3 row-command-body">
           <div class="col-md-8 offset-md-2">        
-            <span class="usage">{{ command.usage | markdownify }}</span>
-            <p>Usage</p>
-          </div>
-        </div>
-        {% endif %}
-        {% if command.aliases and command.aliases != blank %}
-        <div class="row my-3 row-command-body">
-          <div class="col-md-8 offset-md-2">        
-            {% assign aliases = command.aliases %}
-            <ul>{% for alias in aliases%}<li><code>{{ alias }}</code></li>{% endfor %}</ul>
-            <p>Aliases</p>
+            {% assign invocations = command.invocations %}
+            <ul>{% for invocation in invocations%}<li><code>{{ invocation }}</code></li>{% endfor %}</ul>
+            <p class="text-italic">Invocations</p>
           </div>
         </div>
         {% endif %}
