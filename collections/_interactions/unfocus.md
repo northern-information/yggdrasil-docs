@@ -1,6 +1,6 @@
 ---
 weight: 1
-name: Unfocus
+name: Dismiss / Deselect
 keyboard: _esc_
 ---
-Press the _esc_ key to unfocus if no message exists.
+The escape key dismisses messages. If no message exists it deselects.
