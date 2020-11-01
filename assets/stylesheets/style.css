@@ -21,7 +21,8 @@ p a:hover, p a:active, li a:hover, li a:active {
 .text-italic {
   font-style: italic; }
 
-.text-big {
+.text-big, .row-command-body .signature,
+.row-command-body .examples {
   font-size: 2rem; }
 
 .fas {
@@ -50,6 +51,18 @@ p a:hover, p a:active, li a:hover, li a:active {
   border-bottom: 1px solid #FFFFFF;
   padding-bottom: 0.5rem;
   color: #FFFFFF; }
+.row-command-body .signature,
+.row-command-body .examples {
+  display: block; }
+  .row-command-body .signature p,
+  .row-command-body .examples p {
+    display: inline; }
+  .row-command-body .signature tr td,
+  .row-command-body .examples tr td {
+    border: none; }
+    .row-command-body .signature tr td code p em,
+    .row-command-body .examples tr td code p em {
+      padding: 0; }
 
 code, pre {
   color: #FFFF00; }
@@ -93,6 +106,29 @@ hr {
 .mb-10 {
   margin-bottom: 6rem !important; }
 
+.variable-animation, .container-command p code, .row-command-body .signature tr td code p em,
+.row-command-body .examples tr td code p em {
+  background: linear-gradient(to right, #FFFF00 20%, #ffff99 40%, #FFFF00 60%, #ffff99 80%, #FFFF00 100%);
+  background-size: 200% auto;
+  color: #000000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: variableAnimation 4s linear infinite; }
+
+@-webkit-keyframes variableAnimation {
+  to {
+    background-position: 200% center; } }
+@-moz-keyframes variableAnimation {
+  to {
+    background-position: 200% center; } }
+@-o-keyframes variableAnimation {
+  to {
+    background-position: 200% center; } }
+@keyframes variableAnimation {
+  to {
+    background-position: 200% center; } }
 .command-icon-abstract, .command-icon, .command-icon-animated {
   text-align: center;
   width: 100px;

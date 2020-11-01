@@ -1,7 +1,7 @@
 ---
 weight: 2.1
 name: Random
-signatures: ["X Y random"]
+signatures: ["_X_ _Y_ random"]
 examples: ["1 5 random"]
 category: musical
 phenomenon: "?"

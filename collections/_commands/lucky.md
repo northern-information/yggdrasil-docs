@@ -1,7 +1,7 @@
 ---
 weight: 2.2
 name: Lucky
-signatures: ["X Y lucky"]
+signatures: ["_X_ _Y_ lucky"]
 examples: ["1 5 lucky", "2 4 !"]
 category: musical
 phenomenon: "!"

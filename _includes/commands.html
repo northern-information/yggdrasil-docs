@@ -20,14 +20,26 @@
         <div class="row my-5 row-command-body">
           <div class="col-md-8 offset-md-2">
             <h2>Signature{% if command.examples.size > 1 %}s{% endif %}</h2>
-            {% for signature in command.signatures%}<p class="text-big"><code>{{ signature }}</code>&nbsp;&nbsp;<em>&crarr;</em><p>{% endfor %}
+            <div class="table-responsive">
+              <table class="table signature">
+              {% for signature in command.signatures%}
+                <tr><td><code>{{ signature | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
+              {% endfor %}
+              </table>
+            </div>
           </div>
         </div>
         {% if  command.examples and command.examples != blank %}
         <div class="row my-5 row-command-body">
           <div class="col-md-8 offset-md-2">
             <h2>Example{% if command.examples.size > 1 %}s{% endif %}</h2>
-            {% for example in command.examples%}<p class="text-big"><code>{{ example }}</code>&nbsp;&nbsp;<em>&crarr;</em><p>{% endfor %}
+            <div class="table-responsive">
+              <table class="table examples">
+              {% for example in command.examples%}
+                <tr><td><code>{{ example | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
+              {% endfor %}
+              </table>
+            </div>
           </div>
         </div>
         {% endif %}

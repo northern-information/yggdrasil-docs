@@ -1,7 +1,7 @@
 ---
 weight: 2
 name: End
-signatures: ["X Y end"]
+signatures: ["_X_ _Y_ end"]
 examples: ["1 5 end", "2 4 x"]
 category: musical
 phenomenon: "x"

@@ -1,7 +1,7 @@
 ---
 weight: 2.4
 name: Anchor
-signatures: ["X Y #VALUE"]
+signatures: ["_X_ _Y_ #_VALUE_"]
 examples: ["1 5 #8"]
 category: musical
 phenomenon: "#"

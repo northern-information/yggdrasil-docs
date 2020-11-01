@@ -1,6 +1,14 @@
 $black: #000000
 $white: #FFFFFF
 $yellow: #FFFF00
+// $orange: #FA7E61
+$orange: #F96900
+// $lightOrange: #F17F29
+// $lightOrange: #F96900
+// $c1: #F96900
+// $c2: #F45B69
+$c1: #FFFF00
+$c2: lighten(#FFFF00, 30%)
 
 .sans-serif
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
@@ -45,6 +53,9 @@ p, li
       color: $yellow 
       letter-spacing: .5rem
 
+  p code
+    @extend .variable-animation
+
 @media (max-width: 576px)
   .container-command h1 span
     display: block
@@ -62,6 +73,21 @@ p, li
     border-bottom: 1px solid $white
     padding-bottom: .5rem
     color: $white
+
+  .signature,
+  .examples
+    @extend .text-big
+    display: block
+
+    p
+      display: inline
+
+    tr td 
+      border: none
+
+      code p em
+        padding: 0
+        @extend .variable-animation
 
 code, pre
   @extend .monospace
@@ -109,6 +135,35 @@ hr
 
 .mb-10
   margin-bottom: 6rem!important
+
+
+.variable-animation
+  background: linear-gradient(to right, $c1 20%,  $c2 40%, $c1 60%,  $c2 80%, $c1 100%)
+  background-size: 200% auto
+  color: $black
+  background-clip: text
+  text-fill-color: transparent
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  animation: variableAnimation 4s linear infinite
+  
+@-webkit-keyframes variableAnimation
+    to
+      background-position: 200% center
+
+@-moz-keyframes variableAnimation 
+    to
+      background-position: 200% center
+
+@-o-keyframes variableAnimation 
+    to
+      background-position: 200% center
+
+@keyframes variableAnimation 
+    to
+      background-position: 200% center
+
+
 
 .command-icon-abstract
   @extend .monospace

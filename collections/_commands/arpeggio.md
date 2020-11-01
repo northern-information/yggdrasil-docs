@@ -1,9 +1,22 @@
 ---
 weight: 1.3
 name: Arpeggio
-signatures: ["X arp MIDI_NOTE", "X arp;VALUE MIDI_NOTE", "X arp MIDI_NOTE;...", "X Y arp MIDI_NOTE", "X Y arp;VALUE MIDI_NOTE", "X Y arp;VALUE MIDI_NOTE;..."]
-examples: ["1 arp 60", "1 arp 60;63;65;67;63", "1 3 arp 60", "1 3 arp;2 60", "1 3 arp;2 60;63;65"]
+signatures: [
+  "_X_ arp _MIDI_NOTE_", 
+  "_X_ arp;_VALUE_ _MIDI_NOTE_", 
+  "_X_ arp _MIDI_NOTE_;_..._", 
+  "_X_ _Y_ arp _MIDI_NOTE_",
+  "_X_ _Y_ arp;_VALUE_ _MIDI_NOTE_",
+  "_X_ _Y_ arp;_VALUE_ _MIDI_NOTE_;_..._"
+]
+examples: [
+  "1 arp 60",
+  "1 arp 60;63;65;67;63",
+  "1 3 arp 60",
+  "1 3 arp;2 60",
+  "1 3 arp;2 60;63;65"
+]
 category: musical
-description: Arpeggiate an entire track starting at _Y_ with evenly-spaced notes. If _Y_ is absent, start at 1. Default _VALUE_ of spacing is 0. If multiple MIDI notes are used, loop through the notes indefinitely.
+description: Arpeggiate the entire track `X` starting at `Y` with evenly-spaced notes. If `Y` is absent, start at 1. Default `VALUE` of spacing is 0. If multiple `MIDI_NOTES` are used, loop through the notes indefinitely.
 invocations: ["arpeggio", "arp", "a"]
 ---
