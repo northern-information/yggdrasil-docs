@@ -1,14 +1,9 @@
 $black: #000000
 $white: #FFFFFF
 $yellow: #FFFF00
-// $orange: #FA7E61
 $orange: #F96900
-// $lightOrange: #F17F29
-// $lightOrange: #F96900
-// $c1: #F96900
-// $c2: #F45B69
-$c1: #FFFF00
-$c2: lighten(#FFFF00, 30%)
+$gradient1: $yellow
+$gradient2: lighten($yellow, 30%)
 
 .sans-serif
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
@@ -120,9 +115,11 @@ hr
 
 .btn-light
   background: $white
+  border-width: 2px
   
   &:hover
     background: $yellow
+    border-color: $white
 
 .w-10
   width: 10%!important
@@ -136,9 +133,13 @@ hr
 .mb-10
   margin-bottom: 6rem!important
 
+.three-col 
+  columns: 3
+  -webkit-columns: 3
+  -moz-columns: 3
 
 .variable-animation
-  background: linear-gradient(to right, $c1 20%,  $c2 40%, $c1 60%,  $c2 80%, $c1 100%)
+  background: linear-gradient(to right, $gradient1 20%,  $gradient2 40%, $gradient1 60%,  $gradient2 80%, $gradient1 100%)
   background-size: 200% auto
   color: $black
   background-clip: text

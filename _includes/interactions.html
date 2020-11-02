@@ -1,0 +1,11 @@
+<div class="table-responsive">
+  <table class="table">
+    {% for interaction in interactions %}
+      <tr id="{{ interaction.mode | downcase }}-mode-interaction-{{ interaction.name | downcase | replace: " ", "-" }}">
+        <td class="w-25"><strong>{{ interaction.name  | markdownify }}</strong></td>
+        <td class="w-25">{{ interaction.keyboard | markdownify }}</td>
+        <td class="w-50">{{ interaction.content | markdownify }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>

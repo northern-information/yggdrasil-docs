@@ -13,7 +13,7 @@
             {% endif %}
           </div>
           <div class="col-md-8">
-            <h1>{{ command.name }}{% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}</h1>
+            <h1 id="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " ", "-" }}">{{ command.name }}{% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}</h1>
             {{ command.description | markdownify }}
           </div>
         </div>
