@@ -90,7 +90,7 @@ layout: default
     <ul class="three-col mb-5">
     {% assign commands = site.commands | sort: "name" %}
     {% for command in commands %}
-      <li><a href="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " ", "-" }}">{{ command.name }}</a></li>
+      <li><a href="#{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}">{{ command.name }}</a></li>
     {% endfor %}
     </ul>
   </div>
