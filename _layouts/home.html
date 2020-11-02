@@ -16,8 +16,9 @@ layout: default
           <li><a href="#abstract">Abstract</a></li>
           <li><a href="#musical">Musical Commands</a>
           <li><a href="#core">Core Commands</a>
+          <li><a href="#mixer">Mixer Commands</a>
           <li><a href="#view">View Commands</a>
-          <li><a href="#utility">UtilityCommands</a>
+          <li><a href="#utility">Utility Commands</a>
           <li><a href="#eternal-interactions">Interactions</a></li>
           <li><a href="#y-mode-interactions">Y Mode Interactions</a></li>
           <li><a href="#index">Index</a></li>
@@ -54,6 +55,10 @@ layout: default
 
 {% assign commands = site.commands | sort: "weight" | where: "category", "core" %}
 {% assign title = "Core" %}
+{% include commands.html %}
+
+{% assign commands = site.commands | sort: "weight" | where: "category", "mixer" %}
+{% assign title = "Mixer" %}
 {% include commands.html %}
 
 {% assign commands = site.commands | sort: "weight" | where: "category", "view" %}
@@ -100,7 +105,7 @@ layout: default
       <table class="table table-digest table-digest-commands">
       {% assign digest = site.commands | sort: "name" %}
       {% for d in digest %}
-        <tr><td class="w-30">{{ d.name }}</td><td class="w-50"><code>{{ d.signatures | first | markdownify }}</code></td><td class="w-20"><code>{{ d.examples | first | markdownify }}</td></code></tr>
+        <tr><td class="w-33">{{ d.name }}<code>{% for i in d.invocations %} {{ i }}{% endfor %}</code></td><td class="w-33"><code>{{ d.signatures | first | markdownify }}</code></td><td class="w-33"><code>{{ d.examples | first | markdownify }}</td></code></tr>
       {% endfor %}
       </table>
     </div>
@@ -109,7 +114,7 @@ layout: default
       <table class="table table-digest table-digest-interactions">
         {% assign digest = site.interactions | sort: "name" %}
         {% for d in digest %}
-        <tr><td class="w-30">{{ d.name }}</td><td class="w-50">{{ d.keyboard | markdownify }}</td><td class="w-20"><code>{{ d.mode | capitalize }}</td></code></tr>
+        <tr><td class="w-33">{{ d.name }}</td><td class="w-33">{{ d.keyboard | markdownify }}</td><td class="w-33"><code>{{ d.mode | capitalize }}</td></code></tr>
       {% endfor %}
       </table>
     </div>

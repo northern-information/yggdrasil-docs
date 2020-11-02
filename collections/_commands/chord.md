@@ -8,5 +8,5 @@ examples: [
 ]
 category: musical
 description: Paint a chord horizontally starting from `X` `Y`. Automatically append tracks and rows if needed. Any size chord can be built.
-invocations: ["chord", "c", "a"]
+invocations: ["chord", "c"]
 ---
