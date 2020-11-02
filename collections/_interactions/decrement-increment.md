@@ -1,7 +1,7 @@
 ---
-weight: 2
+weight: 3
 name: Decrement / Increment
-keyboard: _f_ and _g_
-mode: y
+keyboard: _&larr;_ and _&rarr;_
+mode: eternal
 ---
-<a href="#normal-mode-interaction-decrement-increment">Same behavior as normal mode.</a>
+Decrement and increment selected values by 1 with the left and right arrow keys. Slots and Tracks with notes are incremented by 1 semitone. If _shift_ is held they are incremented by 12 (an octave).
