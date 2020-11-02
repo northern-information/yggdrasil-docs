@@ -7,19 +7,19 @@
         <div class="row my-3 row-command-title">
           <div class="col-md-2">
             {% if command.phenomenon and command.phenomenon != blank %}
-            <div class="command-icon command-icon-animated"><p><span class="phenomenon">{{ command.phenomenon }}</span></p></div>
+            <div class="command-icon command-icon-animated{% if command.phenomenon.size > 1 %} command-icon-long{% endif %}"><p><span class="phenomenon">{{ command.phenomenon }}</span></p></div>
             {% else %}
             <div class="command-icon"><p><i class="fas fa-terminal"></i></p></div>
             {% endif %}
           </div>
           <div class="col-md-8">
-            <h1 id="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " ", "-" }}">{{ command.name }}{% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}</h1>
+            <h1 id="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}">{{ command.name }}{% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}</h1>
             {{ command.description | markdownify }}
           </div>
         </div>
         <div class="row my-5 row-command-body">
           <div class="col-md-8 offset-md-2">
-            <h2>Signature{% if command.examples.size > 1 %}s{% endif %}</h2>
+            <h2>Signature{% if command.signatures.size > 1 %}s{% endif %}</h2>
             <div class="table-responsive">
               <table class="table signature">
               {% for signature in command.signatures%}

@@ -155,6 +155,11 @@ hr {
     font-style: normal;
     font-size: 4rem; }
 
+.command-icon-long p {
+  padding-top: 20px; }
+  .command-icon-long p .phenomenon {
+    font-size: 3rem !important; }
+
 .command-icon-animated {
   background: linear-gradient(182deg, #ffff66, #FFFF00);
   background-size: 400% 400%;
