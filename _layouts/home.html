@@ -68,10 +68,11 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="eternal-interactions" class="my-5">Eternal Interactions</h1>
+    <h1>Interactions</h1>
+    <h2 id="eternal-interactions" class="my-5">Eternal Interactions</h2>
     {% assign interactions = site.interactions | sort: "weight" | where: "mode", "eternal" %}
     {% include interactions.html %}
-    <h1 id="y-mode-interactions" class="my-5">Y Mode Interactions</h1>
+    <h2 id="y-mode-interactions" class="my-5">Y Mode Interactions</h2>
     {% assign interactions = site.interactions | sort: "weight" | where: "mode", "y" %}
     {% include interactions.html %}
   </div>
