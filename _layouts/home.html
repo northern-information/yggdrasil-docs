@@ -14,15 +14,28 @@ layout: default
         <h1 class="my-5">Contents</h1>
         <ul>
           <li><a href="#abstract">Abstract</a></li>
-          <li><a href="#musical">Musical Commands</a>
-          <li><a href="#core">Core Commands</a>
-          <li><a href="#mixer">Mixer Commands</a>
-          <li><a href="#view">View Commands</a>
-          <li><a href="#utility">Utility Commands</a>
-          <li><a href="#eternal-interactions">Interactions</a></li>
-          <li><a href="#y-mode-interactions">Y Mode Interactions</a></li>
-          <li><a href="#index">Index</a></li>
-          <li><a href="#digest">Digest</a></li>
+          <li>Commands
+            <ul>
+              <li><a href="#musical">Musical</a>
+              <li><a href="#core">Core</a>
+              <li><a href="#mixer">Mixer</a>
+              <li><a href="#view">View</a>
+              <li><a href="#utility">Utility</a>
+            </ul>
+          </li>
+          <li>Interactions
+            <ul>
+              <li><a href="#eternal-interactions">Eternal</a></li>
+              <li><a href="#y-mode-interactions">Y Mode</a></li>
+            </ul>
+          </li>
+          <li>Reference
+            <ul>
+              <li><a href="#index">Index</a></li>
+              <li><a href="#digest">Digest</a></li>
+              <li><a href="#glossary">Glossary</a></li>
+            </ul>
+          </li>
           <li><a href="#learn">Learn</a></li>
           <li><a href="#philosophy">Philosophy</a></li>
         </ul>
@@ -116,6 +129,23 @@ layout: default
         {% for d in digest %}
         <tr><td class="w-33">{{ d.name }}</td><td class="w-33">{{ d.keyboard | markdownify }}</td><td class="w-33"><code>{{ d.mode | capitalize }}</td></code></tr>
       {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-sm-12">
+    <hr>
+    <h1 id="glossary" class="my-5">Glossary</h1>
+      <div class="table-responsive">
+      <table class="table">
+        {% for term in site.glossary %}
+          <tr id="glossary-{{ term.term | downcase | replace: "`", "" | replace: " / ", "-" | replace: " ", "-" }}">
+            <td class="w-25"><strong>{{ term.term  | markdownify }}</strong></td>
+            <td class="w-75">{{ term.content }}</td>
+          </tr>
+        {% endfor %}
       </table>
     </div>
   </div>

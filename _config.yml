@@ -10,4 +10,5 @@ kramdown:
 collections_dir: collections
 collections:
   - commands
+  - glossary
   - interactions
