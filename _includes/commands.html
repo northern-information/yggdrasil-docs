@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="{{ title | downcase }}" class="my-5">{{ title }} Commands</h1>
+    <h1 id="{{ title | downcase }}" class="my-5">{{ title }} Commands<a href="#{{ title | downcase }}" class="link-anchor"><i class="fas fa-link"></i></a></h1>
       {% for command in commands %}
         <div class="container-fluid container-command my-5">
           <div class="row">
@@ -28,6 +28,7 @@
                     <h1 id="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}">
                       {{ command.name }} <!-- (Weight: {{ command.weight }}) -->
                       {% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}
+                      <a href="#{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}" class="link-anchor"><i class="fas fa-link"></i></a>
                     </h1>
                     {{ command.description | markdownify }}
                   </div>

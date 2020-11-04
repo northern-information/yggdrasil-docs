@@ -37,15 +37,26 @@ p, li, code, h2
     color: $white
     text-decoration: none
 
-h2 a
-  margin-left: 2rem
-  font-size: 1rem
-
 .text-italic
   font-style: italic
 
 .text-big
   font-size: 2rem
+
+h1, h2
+  .fas
+    font-size: 1rem
+    color: $yellow
+    padding: 2px
+    border-radius: 2px
+
+  a:hover .fas
+    color: $black
+    background: $yellow
+  
+  a
+    margin-left: 6px
+    font-size: 1rem    
 
 .fas
   color: $black

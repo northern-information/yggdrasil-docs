@@ -6,13 +6,13 @@ layout: default
     <hr>
     <div class="row">
       <div class="col-md-3 col-sm-12">
-        <h1 class="my-5">Setup</h1>
+        <h1 id="setup" class="my-5">Setup<a href="#setup" class="link-anchor"><i class="fas fa-link"></i></a></h1>
         <p>Plug in a US-ANSI keyboard.</p>
         <p>You're ready.<p>
       </div>
       <div class="col-md-3 col-sm-12">
-        <h1 class="my-5">Contents</h1>
-        <ul id="contents">
+        <h1 id="contents" class="my-5">Contents<a href="#contents" class="link-anchor"><i class="fas fa-link"></i></a></h1>
+        <ul>
           <li><a href="#abstract">Abstract</a></li>
           <li>Commands
             <ul>
@@ -50,7 +50,7 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="abstract" class="my-5">Abstract</h1>
+    <h1 id="abstract" class="my-5">Abstract<a href="#abstract" class="link-anchor"><i class="fas fa-link"></i></h1>
       <p>Yggdrasil is a <a href="https://monome.org/docs/norns/">norns</a> cyberdeck <a href="https://en.wikipedia.org/wiki/Music_tracker">tracker</a>. Yggdrasil is an instrument designed to be performed with a keyboard only. Capital letters are not welcome here and modifier keys are used sparingly. The <code>;</code> character is under the little finger: economic, ergonomic, exegesis. "Slots" are the nucleic acids of Yggdrasil, while "commands" and "interactions" are the twin helixes of the human-machine interface. <a href="#eternal-mode-interaction-y-mode-toggle">Toggling <code>Y Mode</code></a> remaps the alpha-numerics, unlocking expressive performance gestures.</p>
       <p>Slots are the building blocks of the tracker. Slots are stacked into tracks of different heights, like so many stalactites reaching into the terminal darkness below. Slots contain single notes (and associated information like velocity), exotic phenomenon, or nothingness. Some of the exotic phenomena include randomizers, "goto" events, and direction toggles. Slots are neurotically focused on their endless descent. They fret not about the tangled complexities of their "row" or other the happenings in other tracks.</p>
       <p>Commands are built from the letters, numbers, and symbols that appear in the terminal as you type. Typically, commands will do things like change notes, control playback, or adjust tempo. Yet other commands will let you copy entire tracks, route notes to different MIDI channels, or even create musical patterns. Commands that start with two numbers operate on a single slot. These first two numbers correspond to the <code>X</code> and <code>Y</code> coordinates of the slot. Commands that start with a single number operate on an entire track. Most commands have verbose and terse invocations. For example arpeggios can be invoked not only with <code>arpeggio</code> but also with <code>arp</code> and <code>a</code>. All commands are executed with the <em>&crarr;</em> / <em>return</em> / <em>enter</em> key.</p> 
@@ -86,11 +86,11 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1>Interactions</h1>
-    <h2 id="eternal-interactions" class="my-5">Eternal Interactions</h2>
+    <h1 id="interactions">Interactions<a href="#interactions" class="link-anchor"><i class="fas fa-link"></i></a></h1>
+    <h2 id="eternal-interactions" class="my-5">Eternal Interactions<a href="#eternal-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     {% assign interactions = site.interactions | sort: "weight" | where: "mode", "eternal" %}
     {% include interactions.html %}
-    <h2 id="y-mode-interactions" class="my-5">Y Mode Interactions</h2>
+    <h2 id="y-mode-interactions" class="my-5">Y Mode Interactions<a href="#y-mode-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     {% assign interactions = site.interactions | sort: "weight" | where: "mode", "y" %}
     {% include interactions.html %}
   </div>
@@ -99,7 +99,7 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="index" class="my-5">Index</h1>
+    <h1 id="index" class="my-5">Index<a href="#index" class="link-anchor"><i class="fas fa-link"></i></a></h1>
     <ul class="three-col mb-5">
     {% assign commands = site.commands | sort: "name" %}
     {% for command in commands %}
@@ -112,8 +112,8 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="digest" class="my-5">Digest</h1>
-    <h2 id="digest-commands">Commands</h2>
+    <h1 id="digest" class="my-5">Digest<a href="#digest" class="link-anchor"><i class="fas fa-link"></i></a></h1>
+    <h2 id="digest-commands">Commands<a href="#edigest-commands" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     <div class="table-responsive">
       <table class="table table-digest table-digest-commands">
       {% assign digest = site.commands | sort: "name" %}
@@ -122,7 +122,7 @@ layout: default
       {% endfor %}
       </table>
     </div>
-    <h2 id="digest-interactions">Interactions</h2>
+    <h2 id="digest-interactions">Interactions<a href="#digest-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     <div class="table-responsive">
       <table class="table table-digest table-digest-interactions">
         {% assign digest = site.interactions | sort: "name" %}
@@ -131,7 +131,7 @@ layout: default
       {% endfor %}
       </table>
     </div>
-    <h2 id="#igest-chords">Chords<a href="https://github.com/northern-information/yggdrasil/blob/d6eb7899615ecb9f75c88f2819b3f37ad5e4b0f4/lib/music.lua#L220-L334">Details</a></h2>
+    <h2 id="digest-chords">Chords<a href="#digest-chords" class="link-anchor"><i class="fas fa-link"></i></a><a href="https://github.com/northern-information/yggdrasil/blob/d6eb7899615ecb9f75c88f2819b3f37ad5e4b0f4/lib/music.lua#L220-L334">Details</a></h2>
     <hr class="hr-white">
     <ul class="six-col mb-5"> 
     {% for chord in site.data.chords.chords %}
@@ -144,7 +144,7 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="glossary" class="my-5">Glossary</h1>
+    <h1 id="glossary" class="my-5">Glossary<a href="#glossary" class="link-anchor"><i class="fas fa-link"></i></a></h1>
       <div class="table-responsive">
       <table class="table">
         {% for term in site.glossary %}
@@ -161,7 +161,7 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="learn" class="my-5">Learn</h1>
+    <h1 id="learn" class="my-5">Learn<a href="#learn" class="link-anchor"><i class="fas fa-link"></i></a></h1>
     <p></p>
   </div>
 </div>
@@ -169,7 +169,7 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="philosophy" class="my-5">Philosophy</h1>
+    <h1 id="philosophy" class="my-5">Philosophy<a href="#philosophy" class="link-anchor"><i class="fas fa-link"></i></a></h1>
     <img title="{{ site.yggdrasil }}" alt="{{ site.yggdrasil }}"  class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/R1-07348-0017.jpg">
   </div>
 </div>

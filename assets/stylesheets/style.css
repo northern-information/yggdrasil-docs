@@ -25,16 +25,24 @@ p a:hover, p a:active, li a:hover, li a:active, code a:hover, code a:active, h2 
   color: #FFFFFF;
   text-decoration: none; }
 
-h2 a {
-  margin-left: 2rem;
-  font-size: 1rem; }
-
 .text-italic {
   font-style: italic; }
 
 .text-big, .row-command-body .signature,
 .row-command-body .examples {
   font-size: 2rem; }
+
+h1 .fas, h2 .fas {
+  font-size: 1rem;
+  color: #FFFF00;
+  padding: 2px;
+  border-radius: 2px; }
+h1 a:hover .fas, h2 a:hover .fas {
+  color: #000000;
+  background: #FFFF00; }
+h1 a, h2 a {
+  margin-left: 6px;
+  font-size: 1rem; }
 
 .fas {
   color: #000000; }
