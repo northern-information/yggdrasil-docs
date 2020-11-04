@@ -5,8 +5,10 @@ signatures: ["_X_ _Y_ chord _MIDI_NOTE_;_MIDI_NOTE_;..."]
 examples: [
   "1 1 chord 60;63;65",
   "1 1 c 60;63;65;72;75",
+  "1 1 chord cmaj",
+  "1 1 c bmaj",
 ]
 category: musical
-description: Paint a chord horizontally starting from `X` `Y`. Automatically append tracks and rows if needed. Any size chord can be built.
+description: Paint a chord horizontally starting from `X` `Y`. Automatically append tracks and rows if needed. Any size chord can be built. In addition to precision chords, an extensive [chord library](#digest-chords) avialable.
 invocations: ["chord", "c"]
 ---
