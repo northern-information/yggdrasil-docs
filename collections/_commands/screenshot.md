@@ -1,5 +1,5 @@
 ---
-weight: 10
+weight: 2
 name: Screenshot
 signatures: ["screenshot"]
 category: utility

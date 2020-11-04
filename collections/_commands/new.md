@@ -1,5 +1,5 @@
 ---
-weight: 11
+weight: 11.1
 name: New
 signatures: ["new"]
 category: core

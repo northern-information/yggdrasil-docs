@@ -1,5 +1,5 @@
 ---
-weight: 1.3
+weight: 1.4
 name: Arpeggio
 signatures: [
   "_X_ arp;_VALUE_ _MIDI_NOTE_;...", 

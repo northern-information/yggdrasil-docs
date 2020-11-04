@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 1.1
 name: Play All
 signatures: ["play"]
 category: core

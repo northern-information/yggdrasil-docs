@@ -1,5 +1,5 @@
 ---
-weight: 12
+weight: 1
 name: Oblique
 signatures: ["oblique"]
 category: utility

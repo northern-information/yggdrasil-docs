@@ -1,5 +1,5 @@
 ---
-weight: 20
+weight: 10
 name: Exit
 signatures: ["exit", "ragequit"]
 category: utility

@@ -1,5 +1,5 @@
 ---
-weight: 11
+weight: 3
 name: Rerun
 signatures: ["rerun"]
 category: utility

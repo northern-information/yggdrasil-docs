@@ -1,5 +1,5 @@
 ---
-weight: 3
+weight: 1
 name: View
 signatures: ["view _VALUE_"]
 examples: ["view midi", "view freq", "v midi", "v ipn", "v mixer"]

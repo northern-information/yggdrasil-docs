@@ -3,56 +3,74 @@
     <hr>
     <h1 id="{{ title | downcase }}" class="my-5">{{ title }} Commands</h1>
       {% for command in commands %}
-      <div class="container-fluid container-command my-5">
-        <div class="row my-3 row-command-title">
-          <div class="col-md-2">
-            {% if command.phenomenon and command.phenomenon != blank %}
-            <div class="command-icon command-icon-animated{% if command.phenomenon.size > 1 %} command-icon-long{% endif %}"><p><span class="phenomenon">{{ command.phenomenon }}</span></p></div>
-            {% else %}
-            <div class="command-icon"><p><i class="fas fa-terminal"></i></p></div>
-            {% endif %}
-          </div>
-          <div class="col-md-8">
-            <h1 id="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}">{{ command.name }}{% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}</h1>
-            {{ command.description | markdownify }}
-          </div>
-        </div>
-        <div class="row my-5 row-command-body">
-          <div class="col-md-8 offset-md-2">
-            <h2>Signature{% if command.signatures.size > 1 %}s{% endif %}</h2>
-            <div class="table-responsive">
-              <table class="table signature">
-              {% for signature in command.signatures%}
-                <tr><td><code>{{ signature | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
-              {% endfor %}
-              </table>
+        <div class="container-fluid container-command my-5">
+          <div class="row">
+
+            <div class="col-md-2 col-sm-12">
+              {% if command.phenomenon and command.phenomenon != blank %}
+                <div class="command-icon command-icon-animated my-3 {% if command.phenomenon.size > 1 %} command-icon-long{% endif %}"><p><span class="phenomenon">{{ command.phenomenon }}</span></p></div>
+                {% else %}
+                <div class="command-icon my-3"><p><i class="fas fa-terminal"></i></p></div>
+                {% if command.images and command.images != blank %}
+                  <ul class="img-sidebar-list">
+                  {% for image in command.images %}
+                    <li><img src="/assets/images/{{ image }}" class="img-sidebar mb-3"></li>
+                  {% endfor %}
+                  </ul>
+                {% endif %}
+              {% endif %}
+            </div>
+
+            <div class="col-md-8 col-sm-12">
+              <div class="container-fluid">
+                <div class="row my-3 row-command-title">
+                  <div class="col">
+                    <h1 id="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}">
+                      {{ command.name }} (Weight: {{ command.weight }})
+                      {% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}
+                    </h1>
+                    {{ command.description | markdownify }}
+                  </div>
+                </div>
+                <div class="row my-5 row-command-body">
+                  <div class="col">
+                    <h2>Signature{% if command.signatures.size > 1 %}s{% endif %}</h2>
+                    <div class="table-responsive">
+                      <table class="table signature">
+                      {% for signature in command.signatures%}
+                        <tr><td><code>{{ signature | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
+                      {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                {% if  command.examples and command.examples != blank %}
+                <div class="row my-5 row-command-body">
+                  <div class="col">
+                    <h2>Example{% if command.examples.size > 1 %}s{% endif %}</h2>
+                    <div class="table-responsive">
+                      <table class="table examples">
+                      {% for example in command.examples%}
+                        <tr><td><code>{{ example | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
+                      {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+                {% if command.invocations and command.invocations != blank %}
+                <div class="row my-5 row-command-body">
+                  <div class="col">
+                    <h2>Invocation{% if command.invocations.size > 1 %}s{% endif %}</h2>
+                    {% assign invocations = command.invocations %}
+                    <ul>{% for invocation in invocations%}<li><code>{{ invocation }}</code></li>{% endfor %}</ul>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
             </div>
           </div>
         </div>
-        {% if  command.examples and command.examples != blank %}
-        <div class="row my-5 row-command-body">
-          <div class="col-md-8 offset-md-2">
-            <h2>Example{% if command.examples.size > 1 %}s{% endif %}</h2>
-            <div class="table-responsive">
-              <table class="table examples">
-              {% for example in command.examples%}
-                <tr><td><code>{{ example | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
-              {% endfor %}
-              </table>
-            </div>
-          </div>
-        </div>
-        {% endif %}
-        {% if command.invocations and command.invocations != blank %}
-        <div class="row my-5 row-command-body">
-          <div class="col-md-8 offset-md-2">
-            <h2>Invocation{% if command.invocations.size > 1 %}s{% endif %}</h2>
-            {% assign invocations = command.invocations %}
-            <ul>{% for invocation in invocations%}<li><code>{{ invocation }}</code></li>{% endfor %}</ul>
-          </div>
-        </div>
-        {% endif %}
-      </div> 
       {% endfor %}
   </div>
 </div>
