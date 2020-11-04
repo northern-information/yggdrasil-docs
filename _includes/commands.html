@@ -26,7 +26,7 @@
                 <div class="row my-3 row-command-title">
                   <div class="col">
                     <h1 id="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}">
-                      {{ command.name }} (Weight: {{ command.weight }})
+                      {{ command.name }} <!-- (Weight: {{ command.weight }}) -->
                       {% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}
                     </h1>
                     {{ command.description | markdownify }}
