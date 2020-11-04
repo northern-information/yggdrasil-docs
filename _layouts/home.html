@@ -86,11 +86,11 @@ layout: default
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
-    <h1 id="interactions">Interactions<a href="#interactions" class="link-anchor"><i class="fas fa-link"></i></a></h1>
-    <h2 id="eternal-interactions" class="my-5">Eternal Interactions<a href="#eternal-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
+    <h1 id="interactions" class="my-5">Interactions<a href="#interactions" class="link-anchor"><i class="fas fa-link"></i></a></h1>
+    <h2 id="eternal-interactions">Eternal Interactions<a href="#eternal-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     {% assign interactions = site.interactions | sort: "weight" | where: "mode", "eternal" %}
     {% include interactions.html %}
-    <h2 id="y-mode-interactions" class="my-5">Y Mode Interactions<a href="#y-mode-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
+    <h2 id="y-mode-interactions">Y Mode Interactions<a href="#y-mode-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     {% assign interactions = site.interactions | sort: "weight" | where: "mode", "y" %}
     {% include interactions.html %}
   </div>
