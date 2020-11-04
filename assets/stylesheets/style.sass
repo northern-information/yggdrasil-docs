@@ -16,6 +16,8 @@ body
   color: $white
   background: $black
 
+h1
+
 h2
   color: $yellow
 
@@ -26,7 +28,7 @@ ul
   ul li
     padding-left: 20px
   
-p, li, code
+p, li, code, h2
   a, a:link, a:visited
     color: $yellow
     text-decoration: underline
@@ -35,6 +37,9 @@ p, li, code
     color: $white
     text-decoration: none
 
+h2 a
+  margin-left: 2rem
+  font-size: 1rem
 
 .text-italic
   font-style: italic
@@ -110,6 +115,11 @@ em
 hr
   border-top: 4px $yellow solid
 
+hr.hr-white
+  border-top: 1px $white solid !important
+  margin-top: 0 !important
+
+
 .table
   tr th
     color: $white
@@ -170,6 +180,11 @@ hr
   columns: 3
   -webkit-columns: 3
   -moz-columns: 3
+
+.six-col 
+  columns: 6
+  -webkit-columns: 6
+  -moz-columns: 6
 
 .variable-animation
   background: linear-gradient(to right, $gradient1 20%,  $gradient2 40%, $gradient1 60%,  $gradient2 80%, $gradient1 100%)
