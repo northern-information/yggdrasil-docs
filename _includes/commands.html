@@ -14,7 +14,7 @@
                 {% if command.images and command.images != blank %}
                   <ul class="img-sidebar-list">
                   {% for image in command.images %}
-                    <li><img src="/assets/images/{{ image }}" class="img-sidebar mb-3"></li>
+                    <li><img src="{{ site.baseurl }}/assets/images/{{ image }}" class="img-sidebar mb-3"></li>
                   {% endfor %}
                   </ul>
                 {% endif %}
