@@ -1,4 +1,4 @@
 ---
-term: Phenomenon
+term: Clade
 ---
-An event, action, or piece of logic associated with a slot. Slots can have one note and one phenomenon.
+The taxonomic principal organizing tracks into one of: synth, MIDI, sampler, or crow.
