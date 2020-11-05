@@ -5,7 +5,6 @@
       {% for command in commands %}
         <div class="container-fluid container-command my-5">
           <div class="row">
-
             <div class="col-md-2 col-sm-12">
               {% if command.phenomenon and command.phenomenon != blank %}
                 <div class="command-icon command-icon-animated my-3 {% if command.phenomenon.size > 1 %} command-icon-long{% endif %}"><p><span class="phenomenon">{{ command.phenomenon }}</span></p></div>
@@ -20,7 +19,6 @@
                 {% endif %}
               {% endif %}
             </div>
-
             <div class="col-md-8 col-sm-12">
               <div class="container-fluid">
                 <div class="row my-3 row-command-title">
