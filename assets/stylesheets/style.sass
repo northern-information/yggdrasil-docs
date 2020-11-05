@@ -108,6 +108,18 @@ h1, h2
         padding: 0
         @extend .variable-animation
 
+@media (max-width: 576px)
+  .row-command-body
+    .signature,
+    .examples
+      font-size: 1rem !important
+  
+    table tr td
+      padding-top: 0
+      padding-right: .5rem
+      padding-bottom: .5rem
+      padding-left: 0
+
 code, pre
   @extend .monospace
   color: $yellow

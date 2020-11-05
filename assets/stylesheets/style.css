@@ -83,6 +83,15 @@ h1 a, h2 a {
     .row-command-body .examples tr td code p em {
       padding: 0; }
 
+@media (max-width: 576px) {
+  .row-command-body .signature,
+  .row-command-body .examples {
+    font-size: 1rem !important; }
+  .row-command-body table tr td {
+    padding-top: 0;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0; } }
 code, pre {
   color: #FFFF00; }
 
