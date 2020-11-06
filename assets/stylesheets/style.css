@@ -164,6 +164,9 @@ hr {
 .fas {
   color: #000000; }
 
+.fas-yellow {
+  color: #FFFF00; }
+
 h1 .fas, h2 .fas {
   font-size: 1rem;
   color: #FFFF00;
@@ -259,7 +262,7 @@ h1 a:hover .fas, h2 a:hover .fas {
 @keyframes variableAnimation {
   to {
     background-position: 200% center; } }
-.command-icon-animated {
+.background-gradient-animation, .command-icon-animated {
   background: linear-gradient(182deg, #ffff66, #FFFF00);
   background-size: 400% 400%;
   -webkit-animation: phenomenonAnimation 4s ease infinite;

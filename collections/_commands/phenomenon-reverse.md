@@ -1,5 +1,5 @@
 ---
-weight: 2.3
+weight: 2.4
 name: Reverse
 signatures: ["_X_ _Y_ reverse"]
 examples: ["1 5 reverse"]

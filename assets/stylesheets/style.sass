@@ -205,6 +205,9 @@ hr
 .fas
   color: $black
 
+.fas-yellow
+  color: $yellow
+
 h1, h2
   .fas
     font-size: $fontSize
@@ -316,6 +319,9 @@ h1, h2
 
 .command-icon-animated
   @extend .command-icon-abstract
+  @extend .background-gradient-animation
+
+.background-gradient-animation
   background: linear-gradient(182deg, lighten($yellow, 20%), $yellow)
   background-size: 400% 400%
   -webkit-animation: phenomenonAnimation 4s ease infinite
