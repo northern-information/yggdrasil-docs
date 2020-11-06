@@ -37,7 +37,7 @@
                     <div class="table-responsive">
                       <table class="table signature">
                       {% for signature in command.signatures%}
-                        <tr><td><code>{{ signature | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
+                        <tr><td class="td-code">{{ signature | markdownify }}</td><td><em>&crarr;</em></td></tr>
                       {% endfor %}
                       </table>
                     </div>
@@ -50,7 +50,7 @@
                     <div class="table-responsive">
                       <table class="table examples">
                       {% for example in command.examples%}
-                        <tr><td><code>{{ example | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
+                        <tr><td class="td-code"><code>{{ example | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
                       {% endfor %}
                       </table>
                     </div>

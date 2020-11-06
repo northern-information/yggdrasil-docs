@@ -3,6 +3,7 @@ $white: #FFFFFF
 $yellow: #FFFF00
 $gradient1: $yellow
 $gradient2: lighten($yellow, 30%)
+$fontSize: 1rem
 
 .sans-serif
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
@@ -12,130 +13,21 @@ $gradient2: lighten($yellow, 30%)
 
 body 
   @extend .sans-serif
-  font-size: 1rem
+  font-size: $fontSize
   color: $white
   background: $black
 
-h2
-  color: $yellow
-
-ul
-  list-style: none
-  padding: 0
-  
-  ul
-    list-style: none
-    padding-left: 20px
-
-code
-  @extend .variable-animation
-  
-p, li, code, h2
-  a, a:link, a:visited
-    color: $yellow
-    text-decoration: underline
-
-  a:hover, a:active
-    color: $white
-    text-decoration: none
-
-th.th-italic
-  font-style: italic
-  font-weight: 500
-
-// MIXINS
-
-.text-italic
-  font-style: italic
-
-.text-big
-  font-size: 2rem
-
-.border-thick
-  border: 4px solid $white
+p
+  font-size: $fontSize
+  em, code, pre
+    font-size: $fontSize
 
 h1, h2
-  .fas
-    font-size: 1rem
-    color: $yellow
-    padding: 2px
-    border-radius: 2px
-
-  a:hover .fas
-    color: $black
-    background: $yellow
-  
   a
     margin-left: 6px
-    font-size: 1rem    
+    font-size: $fontSize    
 
-.fas
-  color: $black
-
-.container-command
-  @extend .border-thick
-
-  .container-fluid
-    padding: 0
-
-  h1
-    border-bottom: 1px solid $white
-
-    span
-      font-size: 1rem
-      color: $yellow 
-      letter-spacing: .5rem
-
-  p code
-    @extend .variable-animation
-
-@media (max-width: 576px)
-  .container-command h1 span
-    display: block
-    margin-bottom: .5rem
-
-.row-command-body
-  ul
-    margin: 0
-    padding: 0
-    list-style: none
-
-  h2
-    font-style: italic
-    font-size: 1rem
-    border-bottom: 1px solid $white
-    padding-bottom: .5rem
-    color: $white
-
-  .signature,
-  .examples
-    @extend .text-big
-    display: block
-
-    p
-      display: inline
-
-    tr td 
-      border: none
-
-      code p em
-        padding: 0
-        @extend .variable-animation
-
-@media (max-width: 576px)
-  .row-command-body
-    .signature,
-    .examples
-      font-size: 1rem !important
-  
-    table tr td
-      padding-top: 0
-      padding-right: .5rem
-      padding-bottom: .5rem
-      padding-left: 0
-
-code, pre
-  @extend .monospace
+h2
   color: $yellow
 
 em
@@ -146,27 +38,144 @@ em
   background: $yellow
   color: $black
 
-.text-italic
-  font-style: italic
+pre
+  @extend .monospace
+  color: $yellow
+  font-size: $fontSize
+
+code
+  @extend .monospace
+  @extend .variable-animation
+  font-size: $fontSize
+
+p, li, code, h2
+  a, a:link, a:visited
+    color: $yellow
+    text-decoration: underline
+
+  a:hover, a:active
+    color: $white
+    text-decoration: none
+
+ul
+  list-style: none
+  padding: 0
+  
+  ul
+    list-style: none
+    padding-left: 20px
 
 hr
   border-top: 4px $yellow solid
 
-hr.hr-white
+.table
+  tr
+    th
+      color: $white
+      border-top: none
+    td
+      color: $white
+
+.fas
+  color: $black
+
+h1, h2
+  .fas
+    font-size: $fontSize
+    color: $yellow
+    padding: 2px
+    border-radius: 2px
+
+  a:hover .fas
+    color: $black
+    background: $yellow
+
+.text-italic
+  font-style: italic
+
+.text-big
+  font-size: 32px !important
+
+.border-thick
+  border: 4px solid $white
+
+.hr-white
   border-top: 1px $white solid !important
   margin-top: 0 !important
 
+.table-sm
 
-.table
-  tr th
-    color: $white
-    border-top: none
+  .th-content
+    font-style: italic
+    font-weight: 400
+    padding: 0
+    margin: 0
+    font-size: $fontSize
 
-  tr td
-    color: $white
+.td-code p
+  @extend code
+  @extend .text-big
+  em
+    @extend .text-big
+    background: none
+    color: $yellow
+    padding: 0
 
-.no-border td
-  border: none
+// COMMANDS
+
+.container-command
+  @extend .border-thick
+  .container-fluid
+    padding: 0
+  h1
+    border-bottom: 1px solid $white
+    span
+      font-size: $fontSize
+      color: $yellow 
+      letter-spacing: $fontSize / 2
+  p code
+    @extend .variable-animation
+  .row-command-body
+    h2
+      font-style: italic
+      font-size: $fontSize
+      border-bottom: 1px solid $white
+      padding-bottom: $fontSize / 2
+      color: $white
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+    .signature,
+    .examples
+      @extend .text-big
+      display: block
+      p
+        display: inline
+      tr td 
+        border: none
+        code p em
+          padding: 0
+          @extend .variable-animation
+
+@media (max-width: 576px)
+  .container-command h1 span
+    display: block
+    margin-bottom: $fontSize / 2
+
+@media (max-width: 576px)
+  .row-command-body
+    .signature,
+    .examples
+      font-size: $fontSize !important
+    table tr td
+      padding-top: 0
+      padding-right: $fontSize / 2
+      padding-bottom: $fontSize / 2
+      padding-left: 0
+
+
+// DIGEST
 
 .table-digest
   td
@@ -183,7 +192,7 @@ hr.hr-white
 .table-digest-interactions
   p
     @extend .sans-serif
-    font-size: 1rem
+    font-size: $fontSize
     em
       @extend em
 
@@ -197,6 +206,8 @@ hr.hr-white
   &:hover
     background: $yellow
     border-color: $white
+
+// BOOTSTRAP EXTENSIONS
 
 .w-10
   width: 10% !important
@@ -226,6 +237,52 @@ hr.hr-white
   -webkit-columns: 6
   -moz-columns: 6
 
+// SPECIAL ELEMENTS
+
+.img-sidebar-list .img-sidebar
+  width: 100px
+
+
+@media (max-width: 768px)
+  .img-sidebar-list
+    float: left
+    margin-left: 16px
+    margin-top: 16px
+
+
+// COMMAND ICON
+
+.command-icon-abstract
+  @extend .monospace
+  text-align: center
+  width: 100px
+  height: 100px
+  display: inline-block
+  font-size: 2em
+  color: $black
+  padding: 5px
+
+@media (max-width: 768px)
+  .command-icon-abstract
+    float: left
+
+.command-icon
+  @extend .command-icon-abstract
+  background: $white
+  i
+    padding-top: 40px 
+  p 
+    .phenomenon
+      font-style: normal
+      font-size: $fontSize * 4
+
+.command-icon-long p 
+  padding-top: 20px
+  .phenomenon
+    font-size: $fontSize * 3 !important
+
+// ANIMATIONS
+
 .variable-animation
   background: linear-gradient(to right, $gradient1 20%,  $gradient2 40%, $gradient1 60%,  $gradient2 80%, $gradient1 100%)
   background-size: 200% auto
@@ -251,48 +308,6 @@ hr.hr-white
 @keyframes variableAnimation 
     to
       background-position: 200% center
-
-.img-sidebar-list .img-sidebar
-  width: 100px
-
-@media (max-width: 768px)
-  .command-icon-abstract
-    float: left
-  
-  .img-sidebar-list
-    float: left
-    margin-left: 16px
-    margin-top: 16px
-  
-
-.command-icon-abstract
-  @extend .monospace
-  text-align: center
-  width: 100px
-  height: 100px
-  display: inline-block
-  font-size: 2em
-  color: $black
-  padding: 5px
-
-.command-icon
-  @extend .command-icon-abstract
-  background: $white
-
-  i
-    padding-top: 40px 
-   
-  p 
-    .phenomenon
-      font-style: normal
-      font-size: 4rem
-
-.command-icon-long p 
-  padding-top: 20px
-  
-  .phenomenon
-    font-size: 3rem !important
-  
 
 .command-icon-animated
   @extend .command-icon-abstract

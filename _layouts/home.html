@@ -6,11 +6,6 @@ layout: default
     <hr>
     <div class="row">
       <div class="col-md-3 col-sm-12">
-        <h1 id="setup" class="my-5">Setup</h1>
-        <p>Plug in a US-ANSI keyboard.</p>
-        <p>You're ready.<p>
-      </div>
-      <div class="col-md-3 col-sm-12">
         <h1 id="contents" class="my-5">Contents</h1>
         <ul>
           <li><a href="#abstract">Abstract</a></li>
@@ -40,6 +35,11 @@ layout: default
           <li><a href="#philosophy">Philosophy</a></li>
         </ul>
       </div>
+      <div class="col-md-3 col-sm-12">
+        <h1 id="setup" class="my-5">Setup</h1>
+        <p>Plug in a US-ANSI keyboard.</p>
+        <p>You're ready.<p>
+      </div>
       <div class="col-md-6 col-sm-12">
         <img title="norns" alt="norns" class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/norns.png">
       </div>
@@ -60,12 +60,12 @@ layout: default
     <p>Commands are built from the letters, numbers, and symbols that appear in the terminal as you type. Typically, commands will do things like change notes, control playback, or adjust tempo. Yet other commands will let you copy entire tracks, route notes to different MIDI channels, or even create musical patterns.</p>
     <p>Commands that start with two numbers operate on a <strong>single slot</strong>.</p>
     <p>Commands that start with one number operate on an <strong>entire track</strong>.</p>
-    <p>Commands that do not start with a number operate <strong>globally</strong>.</p>
+    <p>Commands that do not start with a number operate across <strong>all tracks</strong>.</p>
     <div class="table-responsive mb-3">
       <table class="table table-sm mb-0">
         <tr>
-          <th class="th-italic">Signatures</th>
-          <th class="th-italic">Examples</th>
+          <th class="th-content">Signatures</th>
+          <th class="th-content">Examples</th>
         </tr>
         <tr>
           <td><code class="command">X Y COMMAND;ARG</code></td>
@@ -77,7 +77,7 @@ layout: default
         </tr>
         <tr>
           <td><code class="command">COMMAND;A</code></td>
-          <td><code class="command">bpm;128</code></td>
+          <td><code class="command">unmute</code></td>
         </tr>
       </table>
     </div>
@@ -143,12 +143,16 @@ layout: default
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
     <h1 id="digest" class="my-5">Digest<a href="#digest" class="link-anchor"><i class="fas fa-link"></i></a></h1>
-    <h2 id="digest-commands">Commands<a href="#edigest-commands" class="link-anchor"><i class="fas fa-link"></i></a></h2>
+    <h2 id="digest-commands">Commands<a href="#digest-commands" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     <div class="table-responsive">
-      <table class="table table-digest table-digest-commands">
+      <table class="table table-sm table-digest table-digest-commands">
       {% assign digest = site.commands | sort: "name" %}
       {% for d in digest %}
-        <tr><td class="w-33">{{ d.name }}<code>{% for i in d.invocations %} {{ i }}{% endfor %}</code></td><td class="w-33"><code>{{ d.signatures | first | markdownify }}</code></td><td class="w-33"><code>{{ d.examples | first | markdownify }}</td></code></tr>
+        <tr>
+          <td class="w-33">{{ d.name }}</td>
+          <td class="w-33 td-code">{{ d.signatures | first | markdownify }}</td>
+          <td class="w-33  td-code">{{ d.examples | first | markdownify }}</td>
+        </tr>
       {% endfor %}
       </table>
     </div>
