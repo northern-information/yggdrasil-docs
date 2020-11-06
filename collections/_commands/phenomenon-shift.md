@@ -1,6 +1,6 @@
 ---
 weight: 2.6
-name: Shift
+name: Shift (Phenomenon)
 signatures: ["_X_ _Y_ <_VALUE_", "_X_ _Y_ >_VALUE_"]
 examples: ["1 5 <8", "1 5 <3"]
 category: musical
