@@ -232,10 +232,15 @@ h1 a:hover .fas, h2 a:hover .fas {
     font-style: normal;
     font-size: 4rem; }
 
-.command-icon-long p {
+.command-icon-three p {
   padding-top: 20px; }
-  .command-icon-long p .phenomenon {
+  .command-icon-three p .phenomenon {
     font-size: 3rem !important; }
+
+.command-icon-four p {
+  padding-top: 30px; }
+  .command-icon-four p .phenomenon {
+    font-size: 2rem !important; }
 
 .variable-animation, code, .td-code p, .container-command p code, .container-command p .td-code p, .td-code .container-command p p, .container-command .row-command-body .signatures tr td code p em, .container-command .row-command-body .signatures tr td .td-code p p em, .td-code .container-command .row-command-body .signatures tr td p p em,
 .container-command .row-command-body .examples tr td code p em,

@@ -7,7 +7,7 @@
           <div class="row">
             <div class="col-md-2 col-sm-12">
               {% if command.phenomenon and command.phenomenon != blank %}
-                <div class="command-icon command-icon-animated my-3 {% if command.phenomenon.size > 1 %} command-icon-long{% endif %}"><p><span class="phenomenon">{{ command.phenomenon }}</span></p></div>
+                <div class="command-icon command-icon-animated my-3 {% if command.phenomenon.size == 3%}command-icon-three{% endif %}{% if command.phenomenon.size == 4 %}command-icon-four{% endif %}"><p><span class="phenomenon">{{ command.phenomenon }}</span></p></div>
                 {% else %}
                 <div class="command-icon my-3"><p><i class="fas fa-terminal"></i></p></div>
                 {% if command.images and command.images != blank %}
