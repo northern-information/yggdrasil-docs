@@ -58,18 +58,6 @@ hr {
 .table tr td {
   color: #FFFFFF; }
 
-.fas {
-  color: #000000; }
-
-h1 .fas, h2 .fas {
-  font-size: 1rem;
-  color: #FFFF00;
-  padding: 2px;
-  border-radius: 2px; }
-h1 a:hover .fas, h2 a:hover .fas {
-  color: #000000;
-  background: #FFFF00; }
-
 .text-italic {
   font-style: italic; }
 
@@ -157,8 +145,28 @@ h1 a:hover .fas, h2 a:hover .fas {
 .table-digest-interactions p {
   font-size: 1rem; }
 
+.img-sidebar-list .img-sidebar {
+  width: 100px; }
+
+@media (max-width: 768px) {
+  .img-sidebar-list {
+    float: left;
+    margin-left: 16px;
+    margin-top: 16px; } }
 .ni {
   width: 100px; }
+
+.fas {
+  color: #000000; }
+
+h1 .fas, h2 .fas {
+  font-size: 1rem;
+  color: #FFFF00;
+  padding: 2px;
+  border-radius: 2px; }
+h1 a:hover .fas, h2 a:hover .fas {
+  color: #000000;
+  background: #FFFF00; }
 
 .btn-light {
   background: #FFFFFF;
@@ -195,22 +203,15 @@ h1 a:hover .fas, h2 a:hover .fas {
   -webkit-columns: 6;
   -moz-columns: 6; }
 
-.img-sidebar-list .img-sidebar {
-  width: 100px; }
-
-@media (max-width: 768px) {
-  .img-sidebar-list {
-    float: left;
-    margin-left: 16px;
-    margin-top: 16px; } }
 .command-icon-abstract, .command-icon, .command-icon-animated {
   text-align: center;
   width: 100px;
   height: 100px;
   display: inline-block;
-  font-size: 2em;
   color: #000000;
   padding: 5px; }
+  .command-icon-abstract p, .command-icon p, .command-icon-animated p {
+    font-size: 2rem; }
 
 @media (max-width: 768px) {
   .command-icon-abstract, .command-icon, .command-icon-animated {

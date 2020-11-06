@@ -76,20 +76,6 @@ hr
     td
       color: $white
 
-.fas
-  color: $black
-
-h1, h2
-  .fas
-    font-size: $fontSize
-    color: $yellow
-    padding: 2px
-    border-radius: 2px
-
-  a:hover .fas
-    color: $black
-    background: $yellow
-
 .text-italic
   font-style: italic
 
@@ -104,7 +90,6 @@ h1, h2
   margin-top: 0 !important
 
 .table-sm
-
   .th-content
     font-style: italic
     font-weight: 400
@@ -174,7 +159,6 @@ h1, h2
       padding-bottom: $fontSize / 2
       padding-left: 0
 
-
 // DIGEST
 
 .table-digest
@@ -199,8 +183,35 @@ h1, h2
     em
       @extend em
 
+// SPECIAL ELEMENTS
+
+.img-sidebar-list .img-sidebar
+  width: 100px
+
+@media (max-width: 768px)
+  .img-sidebar-list
+    float: left
+    margin-left: 16px
+    margin-top: 16px
+
 .ni
   width: 100px
+
+.fas
+  color: $black
+
+h1, h2
+  .fas
+    font-size: $fontSize
+    color: $yellow
+    padding: 2px
+    border-radius: 2px
+
+  a:hover .fas
+    color: $black
+    background: $yellow
+
+// BOOTSTRAP EXTENSIONS
 
 .btn-light
   background: $white
@@ -209,8 +220,6 @@ h1, h2
   &:hover
     background: $yellow
     border-color: $white
-
-// BOOTSTRAP EXTENSIONS
 
 .w-10
   width: 10% !important
@@ -240,19 +249,6 @@ h1, h2
   -webkit-columns: 6
   -moz-columns: 6
 
-// SPECIAL ELEMENTS
-
-.img-sidebar-list .img-sidebar
-  width: 100px
-
-
-@media (max-width: 768px)
-  .img-sidebar-list
-    float: left
-    margin-left: 16px
-    margin-top: 16px
-
-
 // COMMAND ICON
 
 .command-icon-abstract
@@ -261,9 +257,10 @@ h1, h2
   width: 100px
   height: 100px
   display: inline-block
-  font-size: 2em
   color: $black
   padding: 5px
+  p
+    font-size: $fontSize * 2
 
 @media (max-width: 768px)
   .command-icon-abstract
