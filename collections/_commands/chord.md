@@ -1,7 +1,7 @@
 ---
 weight: 1.2
 name: Chord
-signatures: ["_X_ _Y_ chord ROOT_PLUS_CHORD_NAME", "_X_ _Y_ c ROOT_PLUS_CHORD_NAME", "_X_ _Y_ c _MIDI_NOTE_;_MIDI_NOTE_;..."]
+signatures: ["_X_ _Y_ chord ROOT_CHORD_NAME", "_X_ _Y_ c ROOT_CHORD_NAME", "_X_ _Y_ c _MIDI_NOTE_;_MIDI_NOTE_;..."]
 examples: [
   "1 1 chord;cmaj",
   "1 1 c;bmaj",
