@@ -19,7 +19,7 @@
                 {% endif %}
               {% endif %}
             </div>
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-10 col-sm-12">
               <div class="container-fluid">
                 <div class="row my-3 row-command-title">
                   <div class="col">
@@ -35,9 +35,12 @@
                   <div class="col">
                     <h2>Signature{% if command.signatures.size > 1 %}s{% endif %}</h2>
                     <div class="table-responsive">
-                      <table class="table signature">
+                      <table class="table signatures">
                       {% for signature in command.signatures%}
-                        <tr><td class="td-code">{{ signature | markdownify }}</td><td><em>&crarr;</em></td></tr>
+                        <tr>
+                            <td class="td-code">{{ signature | markdownify }}</td>
+                            <td class="td-return"><p><em>&crarr;</em></p></td>
+                        </tr>
                       {% endfor %}
                       </table>
                     </div>
@@ -50,7 +53,10 @@
                     <div class="table-responsive">
                       <table class="table examples">
                       {% for example in command.examples%}
-                        <tr><td class="td-code"><code>{{ example | markdownify }}</code></td><td><em>&crarr;</em></td></tr>
+                        <tr>
+                          <td class="td-code"><code>{{ example | markdownify }}</code></td>
+                          <td class="td-return"><p><em>&crarr;</em></p></td>
+                        </tr>
                       {% endfor %}
                       </table>
                     </div>

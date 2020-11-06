@@ -97,14 +97,20 @@ hr
     margin: 0
     font-size: $fontSize
 
+
 .td-code p
   @extend code
-  @extend .text-big
   em
-    @extend .text-big
     background: none
     color: $yellow
     padding: 0
+
+@media (min-width: 576px)
+  .td-code,
+  .td-return
+    p,
+    p em
+      font-size: $fontSize * 2
 
 // COMMANDS
 
@@ -131,9 +137,8 @@ hr
       margin: 0
       padding: 0
       list-style: none
-    .signature,
+    .signatures,
     .examples
-      @extend .text-big
       display: block
       p
         display: inline
@@ -150,7 +155,7 @@ hr
 
 @media (max-width: 576px)
   .row-command-body
-    .signature,
+    .signatures,
     .examples
       font-size: $fontSize !important
     table tr td
@@ -256,7 +261,7 @@ h1, h2
   text-align: center
   width: 100px
   height: 100px
-  display: inline-block
+  display: block
   color: $black
   padding: 5px
   p

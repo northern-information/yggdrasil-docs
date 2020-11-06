@@ -61,8 +61,7 @@ hr {
 .text-italic {
   font-style: italic; }
 
-.text-big, .td-code p, .td-code p em, .container-command .row-command-body .signature,
-.container-command .row-command-body .examples {
+.text-big {
   font-size: 32px !important; }
 
 .border-thick, .container-command {
@@ -84,6 +83,12 @@ hr {
   color: #FFFF00;
   padding: 0; }
 
+@media (min-width: 576px) {
+  .td-code p,
+  .td-code p em,
+  .td-return p,
+  .td-return p em {
+    font-size: 2rem; } }
 .container-command .container-fluid {
   padding: 0; }
 .container-command h1 {
@@ -102,16 +107,16 @@ hr {
   margin: 0;
   padding: 0;
   list-style: none; }
-.container-command .row-command-body .signature,
+.container-command .row-command-body .signatures,
 .container-command .row-command-body .examples {
   display: block; }
-  .container-command .row-command-body .signature p,
+  .container-command .row-command-body .signatures p,
   .container-command .row-command-body .examples p {
     display: inline; }
-  .container-command .row-command-body .signature tr td,
+  .container-command .row-command-body .signatures tr td,
   .container-command .row-command-body .examples tr td {
     border: none; }
-    .container-command .row-command-body .signature tr td code p em, .container-command .row-command-body .signature tr td .td-code p p em, .td-code .container-command .row-command-body .signature tr td p p em,
+    .container-command .row-command-body .signatures tr td code p em, .container-command .row-command-body .signatures tr td .td-code p p em, .td-code .container-command .row-command-body .signatures tr td p p em,
     .container-command .row-command-body .examples tr td code p em,
     .container-command .row-command-body .examples tr td .td-code p p em,
     .td-code .container-command .row-command-body .examples tr td p p em {
@@ -122,7 +127,7 @@ hr {
     display: block;
     margin-bottom: 0.5rem; } }
 @media (max-width: 576px) {
-  .row-command-body .signature,
+  .row-command-body .signatures,
   .row-command-body .examples {
     font-size: 1rem !important; }
   .row-command-body table tr td {
@@ -207,7 +212,7 @@ h1 a:hover .fas, h2 a:hover .fas {
   text-align: center;
   width: 100px;
   height: 100px;
-  display: inline-block;
+  display: block;
   color: #000000;
   padding: 5px; }
   .command-icon-abstract p, .command-icon p, .command-icon-animated p {
@@ -229,7 +234,7 @@ h1 a:hover .fas, h2 a:hover .fas {
   .command-icon-long p .phenomenon {
     font-size: 3rem !important; }
 
-.variable-animation, code, .td-code p, .container-command p code, .container-command p .td-code p, .td-code .container-command p p, .container-command .row-command-body .signature tr td code p em, .container-command .row-command-body .signature tr td .td-code p p em, .td-code .container-command .row-command-body .signature tr td p p em,
+.variable-animation, code, .td-code p, .container-command p code, .container-command p .td-code p, .td-code .container-command p p, .container-command .row-command-body .signatures tr td code p em, .container-command .row-command-body .signatures tr td .td-code p p em, .td-code .container-command .row-command-body .signatures tr td p p em,
 .container-command .row-command-body .examples tr td code p em,
 .container-command .row-command-body .examples tr td .td-code p p em,
 .td-code .container-command .row-command-body .examples tr td p p em {

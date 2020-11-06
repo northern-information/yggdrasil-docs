@@ -12,7 +12,7 @@ signatures: [
 ]
 examples: ["1 1 ypc;load;909kick.wav", "1 ypc;l;909hat.wav", "ypc;bank;909"]
 category: mixer
-description: Set a global sample bank and load load samples into tracks and slots.
+description: Set a global sample bank and load samples into tracks and slots. Yggdrasil can access one bank at a time, but a bank can contain any number of samples. Slots contain can contain one sample, but tracks can contain any slots with different samples. Banks are all directories located at `/dust/audio/yggdrasil/banks/`. Yggdrasil ships with a default `factory` bank. If a filename has frequency information at the end, like `your_sample_name_440hz.wav`, Yggdrasil will repitch accordingly.
 invocations: ["ypc"]
 arguments: ["load", "l", "bank", "b"]
 ---
