@@ -66,6 +66,15 @@
                   </div>
                 </div>
                 {% endif %}
+                {% if command.arguments and command.arguments != blank %}
+                <div class="row my-5 row-command-body">
+                  <div class="col">
+                    <h2>Argument{% if command.arguments.size > 1 %}s{% endif %}</h2>
+                    {% assign arguments = command.arguments %}
+                    <ul>{% for argument in arguments%}<li><code>{{ argument }}</code></li>{% endfor %}</ul>
+                  </div>
+                </div>
+                {% endif %}
               </div>
             </div>
           </div>
