@@ -89,6 +89,7 @@ layout: default
     <img title="Yggdrasil Tracker" alt="Yggdrasil Tracker" class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/screenshot-tracker.png">
     <img title="Yggdrasil Mixer" alt="Yggdrasil Mixer" class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/screenshot-mixer.png">
     <img title="Yggdrasil Clades" alt="Yggdrasil Clades" class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/screenshot-clades.png">
+    <img title="Tracker Planes" alt="Tracker Planes" class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/tracker-planes.png">
   </div>
 </div>
 
@@ -197,10 +198,13 @@ layout: default
   <div class="col-md-10 offset-md-1 col-sm-12">
     <hr>
     <h1 id="learn" class="my-5">Learn<a href="#learn" class="link-anchor"><i class="fas fa-link"></i></a></h1>
-    <img title="Tracker Planes" alt="Tracker Planes"  class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/tracker-planes.png">
-    <p>Imagine the tracker with four planes: notes, velocities, samples, and phenomenon. With the <a href="#view-command-view">view</a> command you can toggle each plane on and off. Each slot can have up to one value stored in each plane.</p>
   </div>
 </div>
+
+{% assign lessons = site.lessons | sort: "weight" %}
+{% for lesson in lessons %}
+{% include lessons.html %}
+{% endfor %}
 
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">

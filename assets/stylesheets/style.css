@@ -64,6 +64,11 @@ hr {
 .text-big {
   font-size: 32px !important; }
 
+.kerned, .container-command h1 span, .row-lesson h2 span {
+  font-size: 1rem;
+  color: #FFFF00;
+  letter-spacing: 0.5rem; }
+
 .border-thick, .container-command {
   border: 4px solid #FFFFFF; }
 
@@ -93,10 +98,6 @@ hr {
   padding: 0; }
 .container-command h1 {
   border-bottom: 1px solid #FFFFFF; }
-  .container-command h1 span {
-    font-size: 1rem;
-    color: #FFFF00;
-    letter-spacing: 0.5rem; }
 .container-command .row-command-body h2 {
   font-style: italic;
   font-size: 1rem;
@@ -149,6 +150,9 @@ hr {
 
 .table-digest-interactions p {
   font-size: 1rem; }
+
+.row-lesson h2 span {
+  color: #FFFFFF; }
 
 .img-sidebar-list .img-sidebar {
   width: 100px; }

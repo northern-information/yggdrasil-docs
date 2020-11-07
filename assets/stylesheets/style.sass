@@ -82,6 +82,11 @@ hr
 .text-big
   font-size: 32px !important
 
+.kerned
+  font-size: $fontSize
+  color: $yellow 
+  letter-spacing: $fontSize / 2
+
 .border-thick
   border: 4px solid $white
 
@@ -121,9 +126,7 @@ hr
   h1
     border-bottom: 1px solid $white
     span
-      font-size: $fontSize
-      color: $yellow 
-      letter-spacing: $fontSize / 2
+      @extend .kerned
   p code
     @extend .variable-animation
   .row-command-body
@@ -187,6 +190,11 @@ hr
     font-size: $fontSize
     em
       @extend em
+
+// LESSONS
+.row-lesson h2 span
+  @extend .kerned
+  color: $white
 
 // SPECIAL ELEMENTS
 
