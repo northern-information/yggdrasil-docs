@@ -1,7 +1,7 @@
 ---
 weight: 0
 name: Select Track
-keyboard: _1_ ... _0_ (+ _shift_ & _1_ ... _0_)
+keyboard: _1_ ... _0_ & _shift_
 mode: y
 ---
-Select track 1 - 10 with the number keys. Hold shift and then press another number to select a range of tracks.
+Select tracks 1 through 10 with the number keys. Hold _shift_ and then press another number to select a range of tracks.
