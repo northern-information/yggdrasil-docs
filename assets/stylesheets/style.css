@@ -231,6 +231,8 @@ h1 a:hover .fas, h2 a:hover .fas {
   .command-icon p .phenomenon {
     font-style: normal;
     font-size: 4rem; }
+    .command-icon p .phenomenon i {
+      padding-top: 0; }
 
 .command-icon-three p {
   padding-top: 20px; }

@@ -24,7 +24,7 @@
                 <div class="row my-3 row-command-title">
                   <div class="col">
                     <h1 id="{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}">
-                      {{ command.name }} <!-- (Weight: {{ command.weight }}) -->
+                      {{ command.name | replace: " (Phenomenon)" ""}} <!-- (Weight: {{ command.weight }}) -->
                       <a href="#{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}" class="link-anchor"><i class="fas fa-link"></i></a>
                       {% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}
                     </h1>
