@@ -2,17 +2,11 @@
 weight: 1.4
 name: Arpeggio
 signatures: [
-  "_X_ _Y_ arpeggio _MIDI_NOTE_",
-  "_X_ _Y_ arp _MIDI_NOTE_;_MIDI_NOTE_;...",
   "_X_ _Y_ arp _CHORD_",
-  "_X_ _Y_ arp;_VALUE_ _MIDI_NOTE_;...",
   "_X_ _Y_ arp;_VALUE_ _CHORD_",
-  "_X_ arp _CHORD_",
-  "_X_ arp;_VALUE_ _MIDI_NOTE_",
   "_X_ arp;_VALUE_ _CHORD_",
+  "_X_ _Y_ arp _MIDI_NOTE_;...",
   "_X_ a _CHORD_",
-  "_X_ a;_VALUE_ _MIDI_NOTE_",
-  "_X_ a;_VALUE_ _CHORD_",
 ]
 examples: [
   "1 arp 60",
