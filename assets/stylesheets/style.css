@@ -151,8 +151,8 @@ hr {
 .table-digest-interactions p {
   font-size: 1rem; }
 
-.row-lesson h2 span {
-  color: #FFFFFF; }
+.row-lesson p {
+  line-height: 2rem; }
 
 .img-sidebar-list .img-sidebar {
   width: 100px; }
