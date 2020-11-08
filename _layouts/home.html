@@ -29,6 +29,7 @@ layout: default
             <ul>
               <li><a href="#digest">Digest</a></li>
               <li><a href="#glossary">Glossary</a></li>
+              <li><a href="#changelog">Changelog</a></li>
             </ul>
           </li>
           <li><a href="#learn">Learn</a></li>
@@ -82,7 +83,7 @@ layout: default
       </table>
     </div>
     <p>These leading numbers correspond to <code>X</code> and <code>Y</code> coordinates, respectively. Most commands have both verbose and terse invocations. For example arpeggios can be invoked not only with <code>arpeggio</code> but also with <code>arp</code> and <code>a</code>. All commands are executed with the <em>&crarr;</em> / <em>return</em> / <em>enter</em> key.</p> 
-    <p>Interactions are simply "everything else" you do with the keyboard; our silent movements through Yggdrasil's data streams. While some interactions technically manipulate sound under certain conditions (such as <em>backspace</em> to clear a selected slot), most are simply affordances for navigation &mdash; things like toggling views, dismissing messages, or paging through through command history.</p>
+    <p>Interactions are simply "everything else" you do with the keyboard; our silent movements through Yggdrasil's data streams. While some interactions technically manipulate sound under certain conditions (such as <em>ctrl</em> + <em>backspace</em> to clear a selected slot), most are simply affordances for navigation &mdash; things like toggling views, dismissing messages, or paging through through command history.</p>
     <p>Let's go.</p>
   </div>
   <div class="col-md-5 col-sm-12">
@@ -190,6 +191,23 @@ layout: default
           </tr>
         {% endfor %}
       </table>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-sm-12">
+    <hr>
+    <h1 id="changelog" class="my-5">Changelog<a href="#glossary" class="link-anchor"><i class="fas fa-link"></i></a></h1>
+    <div class="container-fluid">
+      {% assign changelog_by_order = site.changelog | sort: "order" | reverse %}
+      {% for log in changelog_by_order %}
+      <div class="row">
+        <div class="col-md-2 col-sm-12 pl-0"  id="{{ log.version }}"><strong>{{ log.version }}</strong></div>
+        <div class="col-md-10 col-sm-12">{{ log.content }}</div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

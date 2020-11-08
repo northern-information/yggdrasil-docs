@@ -9,6 +9,7 @@ kramdown:
   parse_block_html: true
 collections_dir: collections
 collections:
+  - changelog
   - commands
   - glossary
   - interactions

@@ -1,5 +1,5 @@
 ---
-weight: 3
+weight: 6
 topic: Increment / Decrement
 ymode: true
 image: keyboard-increment-decrement.png
