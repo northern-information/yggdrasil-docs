@@ -151,6 +151,17 @@ hr {
 .table-digest-interactions p {
   font-size: 1rem; }
 
+.container-changelog .row {
+  border-top: 1px #FFFFFF solid; }
+  .container-changelog .row li {
+    margin-bottom: 5px; }
+    .container-changelog .row li strong {
+      border: 1px solid #FFFF00;
+      color: #FFFF00;
+      padding: 1px 8px;
+      border-radius: 2px;
+      font-weight: 400; }
+
 .row-lesson p {
   line-height: 2rem; }
 
