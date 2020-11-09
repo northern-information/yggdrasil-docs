@@ -13,6 +13,6 @@
     {{ lesson.description | markdownify }}
   </div>
   <div class="col-md-5 col-sm-12">
-    <img class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/{{ lesson.image }}">
+    {% if lesson.image and lesson.image != blank %}<img class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/{{ lesson.image }}">{% endif %}
   </div>
 </div>
