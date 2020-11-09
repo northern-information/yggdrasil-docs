@@ -4,4 +4,4 @@ name: Decrement / Increment
 keyboard: _f_ and _g_
 mode: y
 ---
-<a href="#normal-mode-interaction-decrement-increment">Same behavior as eternal mode.</a>
+<a href="#eternal-mode-interaction-decrement-increment">Same behavior as eternal mode.</a> asdfasdf
