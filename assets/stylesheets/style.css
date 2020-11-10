@@ -1,7 +1,8 @@
 .sans-serif, body, .table-digest-interactions p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
 
-.monospace, em, .table-digest-interactions p em, pre, code, .td-code p, .command-icon-abstract, .command-icon, .command-icon-animated {
+.monospace, em, .table-digest-interactions p em, pre, code, .td-code p, .icon-abstract, .command-icon, .command-icon-animated,
+.y-mode-icon-animated {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 body {
@@ -64,7 +65,7 @@ hr {
 .text-big {
   font-size: 32px !important; }
 
-.kerned, .container-command h1 span, .row-lesson h2 span {
+.kerned, .span-y-mode, .container-command h1 span, .row-lesson h2 span {
   font-size: 1rem;
   color: #FFFF00;
   letter-spacing: 0.5rem; }
@@ -75,6 +76,10 @@ hr {
 .hr-white {
   border-top: 1px #FFFFFF solid !important;
   margin-top: 0 !important; }
+
+.span-y-mode {
+  color: #FFFFFF;
+  margin-left: 20px; }
 
 .table-sm .th-content {
   font-style: italic;
@@ -226,20 +231,23 @@ h1 a:hover .fas, h2 a:hover .fas {
   -webkit-columns: 6;
   -moz-columns: 6; }
 
-.command-icon-abstract, .command-icon, .command-icon-animated {
+.icon-abstract, .command-icon, .command-icon-animated,
+.y-mode-icon-animated {
   text-align: center;
-  width: 100px;
-  height: 100px;
   display: block;
   color: #000000;
   padding: 5px; }
-  .command-icon-abstract p, .command-icon p, .command-icon-animated p {
+  .icon-abstract p, .command-icon p, .command-icon-animated p,
+  .y-mode-icon-animated p {
     font-size: 2rem; }
 
 @media (max-width: 768px) {
-  .command-icon-abstract, .command-icon, .command-icon-animated {
+  .icon-abstract, .command-icon, .command-icon-animated,
+  .y-mode-icon-animated {
     float: left; } }
 .command-icon {
+  width: 100px;
+  height: 100px;
   background: #FFFFFF; }
   .command-icon i {
     padding-top: 40px; }
@@ -258,6 +266,13 @@ h1 a:hover .fas, h2 a:hover .fas {
   padding-top: 30px; }
   .command-icon-four p .phenomenon {
     font-size: 2rem !important; }
+
+.y-mode-icon {
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 10px; }
 
 .variable-animation, code, .td-code p, .container-command p code, .container-command p .td-code p, .td-code .container-command p p, .container-command .row-command-body .signatures tr td code p em, .container-command .row-command-body .signatures tr td .td-code p p em, .td-code .container-command .row-command-body .signatures tr td p p em,
 .container-command .row-command-body .examples tr td code p em,
@@ -284,7 +299,8 @@ h1 a:hover .fas, h2 a:hover .fas {
 @keyframes variableAnimation {
   to {
     background-position: 200% center; } }
-.background-gradient-animation, .command-icon-animated {
+.background-gradient-animation, .command-icon-animated,
+.y-mode-icon-animated {
   background: linear-gradient(182deg, #ffff66, #FFFF00);
   background-size: 400% 400%;
   -webkit-animation: phenomenonAnimation 4s ease infinite;

@@ -94,6 +94,11 @@ hr
   border-top: 1px $white solid !important
   margin-top: 0 !important
 
+.span-y-mode
+  @extend .kerned
+  color: $white
+  margin-left: 20px
+
 .table-sm
   .th-content
     font-style: italic
@@ -101,7 +106,6 @@ hr
     padding: 0
     margin: 0
     font-size: $fontSize
-
 
 .td-code p
   @extend code
@@ -287,11 +291,9 @@ h1, h2
 
 // COMMAND ICON
 
-.command-icon-abstract
+.icon-abstract
   @extend .monospace
   text-align: center
-  width: 100px
-  height: 100px
   display: block
   color: $black
   padding: 5px
@@ -299,11 +301,13 @@ h1, h2
     font-size: $fontSize * 2
 
 @media (max-width: 768px)
-  .command-icon-abstract
+  .icon-abstract
     float: left
 
 .command-icon
-  @extend .command-icon-abstract
+  @extend .icon-abstract
+  width: 100px
+  height: 100px
   background: $white
   i
     padding-top: 40px 
@@ -324,6 +328,13 @@ h1, h2
   padding-top: 30px
   .phenomenon
     font-size: $fontSize * 2 !important
+
+.y-mode-icon
+  margin: 0
+  width: 32px
+  height: 32px
+  display: inline-block
+  margin-right: 10px
 
 // ANIMATIONS
 
@@ -353,8 +364,9 @@ h1, h2
     to
       background-position: 200% center
 
-.command-icon-animated
-  @extend .command-icon-abstract
+.command-icon-animated,
+.y-mode-icon-animated
+  @extend .icon-abstract
   @extend .background-gradient-animation
 
 .background-gradient-animation
