@@ -1,18 +1,24 @@
 <div class="row row-lesson">
   <div class="col-md-10 offset-md-1 col-sm-12">
     <h2 id="#lesson-{{ lesson.topic | downcase | replace: " / ", "-" | replace: " ", "-" }}">
+      {% if lesson.ymode %}<img src="{{ site.baseurl }}/assets/images/y-mode.png" class="align-baseline y-mode-icon">{% endif %}
       {{ lesson.topic }}
       <a href="#lesson-{{ lesson.topic | downcase | replace: " / ", "-" | replace: " ", "-" }}" class="link-anchor"><i class="fas fa-link"></i></a>
-      {% if lesson.ymode %}&nbsp;<span>Y MODE</span>{% endif %}
     </h2>
     <hr class="hr-white">
   </div>
 </div>
 <div class="row row-lesson mb-5">
+{% if lesson.image and lesson.image != blank %}
   <div class="col-md-5 offset-md-1 col-sm-12">
     {{ lesson.description | markdownify }}
   </div>
   <div class="col-md-5 col-sm-12">
-    {% if lesson.image and lesson.image != blank %}<img class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/{{ lesson.image }}">{% endif %}
+    <img class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/{{ lesson.image }}">
   </div>
+{% else %}
+  <div class="col-md-10 offset-md-1 col-sm-12">
+    {{ lesson.description | markdownify }}
+  </div>
+{% endif %}
 </div>

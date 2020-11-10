@@ -136,7 +136,7 @@ layout: default
     <h2 id="eternal-interactions">Eternal Interactions<a href="#eternal-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     {% assign interactions = site.interactions | sort: "weight" | where: "mode", "eternal" %}
     {% include interactions.html %}
-    <h2 id="y-mode-interactions">Y Mode Interactions<a href="#y-mode-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
+    <h2 id="y-mode-interactions"><img src="{{ site.baseurl }}/assets/images/y-mode.png" class="align-baseline y-mode-icon">Y Mode Interactions<a href="#y-mode-interactions" class="link-anchor"><i class="fas fa-link"></i></a></h2>
     {% assign interactions = site.interactions | sort: "weight" | where: "mode", "y" %}
     {% include interactions.html %}
   </div>
