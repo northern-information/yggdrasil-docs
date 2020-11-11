@@ -4,6 +4,6 @@ name: Shift
 signatures: ["_X_ shift;_VALUE_"]
 examples: ["1 shift;3", "2 s;-5"]
 category: musical
-description: Shift down (or up; value can be negative) a track's slots by a value. Slots wrap.
 invocations: ["shift", "s"]
 ---
+Shift down (or up; value can be negative) a track's slots by a value. Slots wrap.

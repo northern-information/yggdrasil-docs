@@ -28,7 +28,7 @@
                       <a href="#{{ command.category | downcase }}-command-{{ command.name | downcase | replace: " / ", "-" | replace: " ", "-" }}" class="link-anchor"><i class="fas fa-link"></i></a>
                       {% if command.phenomenon and command.phenomenon != blank %}&nbsp;<span>PHENOMENON</span>{% endif %}
                     </h1>
-                    {{ command.description | markdownify }}
+                    {{ command.content }}
                   </div>
                 </div>
                 <div class="row my-5 row-command-body">

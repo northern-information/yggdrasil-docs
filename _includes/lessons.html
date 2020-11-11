@@ -11,14 +11,14 @@
 <div class="row row-lesson mb-5">
 {% if lesson.image and lesson.image != blank %}
   <div class="col-md-5 offset-md-1 col-sm-12">
-    {{ lesson.description | markdownify }}
+    {{ lesson.content }}
   </div>
   <div class="col-md-5 col-sm-12">
     <img class="mx-auto d-block img-fluid" src="{{ site.baseurl }}/assets/images/{{ lesson.image }}">
   </div>
 {% else %}
   <div class="col-md-10 offset-md-1 col-sm-12">
-    {{ lesson.description | markdownify }}
+    {{ lesson.content | markdownify }}
   </div>
 {% endif %}
 </div>

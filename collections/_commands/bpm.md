@@ -4,5 +4,5 @@ name: BPM
 signatures: ["bpm;_VALUE_"]
 examples: ["bpm;149.3"]
 category: core
-description: Set the BPM to a value.
 ---
+Set the BPM to a value.
