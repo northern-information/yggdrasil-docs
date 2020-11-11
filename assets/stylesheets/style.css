@@ -1,8 +1,7 @@
 .sans-serif, body, .table-digest-interactions p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
 
-.monospace, em, .table-digest-interactions p em, pre, code, .td-code p, .icon-abstract, .command-icon, .command-icon-animated,
-.y-mode-icon-animated {
+.monospace, em, .table-digest-interactions p em, pre, code, .td-code p, .icon-abstract, .command-icon, .command-icon-animated {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 body {
@@ -231,19 +230,16 @@ h1 a:hover .fas, h2 a:hover .fas {
   -webkit-columns: 6;
   -moz-columns: 6; }
 
-.icon-abstract, .command-icon, .command-icon-animated,
-.y-mode-icon-animated {
+.icon-abstract, .command-icon, .command-icon-animated {
   text-align: center;
   display: block;
   color: #000000;
   padding: 5px; }
-  .icon-abstract p, .command-icon p, .command-icon-animated p,
-  .y-mode-icon-animated p {
+  .icon-abstract p, .command-icon p, .command-icon-animated p {
     font-size: 2rem; }
 
 @media (max-width: 768px) {
-  .icon-abstract, .command-icon, .command-icon-animated,
-  .y-mode-icon-animated {
+  .icon-abstract, .command-icon, .command-icon-animated {
     float: left; } }
 .command-icon {
   width: 100px;
@@ -274,6 +270,17 @@ h1 a:hover .fas, h2 a:hover .fas {
   display: inline-block;
   margin-right: 10px; }
 
+@media (max-width: 767.98px) {
+  .variable-animation, code, .td-code p, .container-command p code, .container-command p .td-code p, .td-code .container-command p p, .container-command .row-command-body .signatures tr td code p em, .container-command .row-command-body .signatures tr td .td-code p p em, .td-code .container-command .row-command-body .signatures tr td p p em,
+  .container-command .row-command-body .examples tr td code p em,
+  .container-command .row-command-body .examples tr td .td-code p p em,
+  .td-code .container-command .row-command-body .examples tr td p p em {
+    -webkit-background-clip: border-box !important;
+    -webkit-text-fill-color: #FFFF00 !important;
+    background-clip: border-box !important;
+    background: none !important;
+    color: #FFFF00 !important;
+    text-fill-color: #FFFF00 !important; } }
 .variable-animation, code, .td-code p, .container-command p code, .container-command p .td-code p, .td-code .container-command p p, .container-command .row-command-body .signatures tr td code p em, .container-command .row-command-body .signatures tr td .td-code p p em, .td-code .container-command .row-command-body .signatures tr td p p em,
 .container-command .row-command-body .examples tr td code p em,
 .container-command .row-command-body .examples tr td .td-code p p em,
@@ -299,8 +306,7 @@ h1 a:hover .fas, h2 a:hover .fas {
 @keyframes variableAnimation {
   to {
     background-position: 200% center; } }
-.background-gradient-animation, .command-icon-animated,
-.y-mode-icon-animated {
+.background-gradient-animation, .command-icon-animated {
   background: linear-gradient(182deg, #ffff66, #FFFF00);
   background-size: 400% 400%;
   -webkit-animation: phenomenonAnimation 4s ease infinite;

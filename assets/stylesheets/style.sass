@@ -338,6 +338,15 @@ h1, h2
 
 // ANIMATIONS
 
+@media (max-width: 767.98px)
+  .variable-animation
+    -webkit-background-clip: border-box !important
+    -webkit-text-fill-color: $yellow !important
+    background-clip: border-box !important
+    background: none !important
+    color: $yellow !important
+    text-fill-color: $yellow !important
+
 .variable-animation
   background: linear-gradient(to right, $gradient1 20%,  $gradient2 40%, $gradient1 60%,  $gradient2 80%, $gradient1 100%)
   background-size: 200% auto
@@ -364,8 +373,7 @@ h1, h2
     to
       background-position: 200% center
 
-.command-icon-animated,
-.y-mode-icon-animated
+.command-icon-animated
   @extend .icon-abstract
   @extend .background-gradient-animation
 
