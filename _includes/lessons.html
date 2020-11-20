@@ -1,6 +1,6 @@
 <div class="row row-lesson">
   <div class="col-md-10 offset-md-1 col-sm-12">
-    <h2 id="#lesson-{{ lesson.topic | downcase | replace: " / ", "-" | replace: " ", "-" }}">
+    <h2 id="lesson-{{ lesson.topic | downcase | replace: " / ", "-" | replace: " ", "-" }}">
       {% if lesson.ymode %}<img src="{{ site.baseurl }}/assets/images/y-mode.png" class="align-baseline y-mode-icon">{% endif %}
       {{ lesson.topic }}
       <a href="#lesson-{{ lesson.topic | downcase | replace: " / ", "-" | replace: " ", "-" }}" class="link-anchor"><i class="fas fa-link"></i></a>
