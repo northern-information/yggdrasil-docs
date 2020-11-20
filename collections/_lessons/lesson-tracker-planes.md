@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 1.1
 topic: Tracker Planes
 ymode: false
 image: tracker-planes.png

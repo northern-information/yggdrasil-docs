@@ -168,6 +168,10 @@ hr {
 
 .row-lesson p {
   line-height: 2rem; }
+.row-lesson ul li {
+  margin: 0 0 5px 0;
+  list-style: disc;
+  list-style-position: inside; }
 
 .img-sidebar-list .img-sidebar {
   width: 100px; }
