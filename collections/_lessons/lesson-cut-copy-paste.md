@@ -1,6 +1,6 @@
 ---
 weight: 5.2
-topic: Cut, Copy, & Paste
+topic: Cut, Copy & Paste
 ymode: false
 image: keyboard-cut-copy-paste.png
 ---
