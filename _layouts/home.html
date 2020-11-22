@@ -33,6 +33,7 @@ layout: default
             </ul>
           </li>
           <li><a href="#learn">Learn</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#philosophy">Philosophy</a></li>
         </ul>
       </div>
@@ -84,7 +85,7 @@ layout: default
       </table>
     </div>
     <p>These leading numbers correspond to <code>X</code> and <code>Y</code> coordinates, respectively. Most commands have both verbose and terse invocations. For example arpeggios can be invoked not only with <code>arpeggio</code> but also with <code>arp</code> and <code>a</code>. All commands are executed with the <em>&crarr;</em> / <em>return</em> / <em>enter</em> key.</p> 
-    <p>Interactions are simply "everything else" you do with the keyboard; our silent movements through Yggdrasil's data streams. While some interactions technically manipulate sound under certain conditions (such as <em>ctrl</em> + <em>backspace</em> to clear a selected slot), most are simply affordances for navigation &mdash; things like toggling views, dismissing messages, or paging through through command history.</p>
+    <p>Interactions are simply "everything else" you do with the keyboard; our silent movements through Yggdrasil's data streams. While some interactions technically manipulate sound under certain conditions (such as <em>mod</em> + <em>backspace</em> to clear a selected slot), most are simply affordances for navigation &mdash; things like toggling views, dismissing messages, or paging through through command history. <em>ctrl</em>, <em>alt</em>, <em>opt</em>, and <em>cmd</em> are functionally identical and collectively referred to as <em>mod</em>.</p>
     <p>Let's go.</p>
   </div>
   <div class="col-md-5 col-sm-12">
@@ -224,6 +225,18 @@ layout: default
 {% for lesson in lessons %}
 {% include lessons.html %}
 {% endfor %}
+
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-sm-12">
+    <hr>
+    <h1 id="gallery" class="my-5">Gallery<a href="#gallery" class="link-anchor"><i class="fas fa-link"></i></a></h1>
+    <ul class="three-col mb-5"> 
+    {% for item in site.data.gallery.gallery %}
+      <li> {{ item | markdownify }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-md-10 offset-md-1 col-sm-12">

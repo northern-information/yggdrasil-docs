@@ -9,7 +9,7 @@ image: screenshot-editor.png
 - _&larr;_ and _&rarr;_ move the text cursor.
 - _tab_ and _tab_ + _shift_ cycle through the attributes.
 - _&uarr;_ and _&darr;_ also cycle through the attributes.
-- _ctrl_ + arrows aborts and moves to adjacent slot.
+- _mod_ + arrows aborts and moves to adjacent slot.
 - Pressing _enter_ at any time commits a **valid** form.
 - Pressing enter will do nothing to an **invalid** form.
 - Entries are validated in real-time. Invalid submissions are not allowed.

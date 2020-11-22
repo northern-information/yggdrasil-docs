@@ -1,5 +1,5 @@
 ---
-weight: 4.2
+weight: 6.1
 name: Remove
 signatures: ["_X_ _Y_ remove", "_X_ remove"]
 examples: ["1 remove", "1 2 rm"]
