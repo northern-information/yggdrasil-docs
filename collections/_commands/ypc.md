@@ -19,4 +19,4 @@ Set a global sample bank and load samples into tracks and slots. Yggdrasil can a
 
 Yggdrasil ships with a default `factory` bank.
 
-If a filename has frequency information at the end, like `your_sample_name_440hz.wav`, Yggdrasil will repitch intelligently. Once a sample is loaded into a slot, a note value also needs to be set. A common technique is to use `x ypc;l;your_sample_name_440hz.wav` and then use `x arp`.
+If a filename has frequency information at the end, like `your_sample_name_440hz.wav`, Yggdrasil will repitch intelligently. If the filename does not have frequency information at the end, a default of 440hz will be used. Once a sample is loaded into a slot, a note value also needs to be set. A common technique is to use `x ypc;l;your_sample_name_440hz.wav` and then use `x arp`.
