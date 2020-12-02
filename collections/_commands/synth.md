@@ -8,9 +8,11 @@ category: mixer
 invocations: ["synth"]
 arguments: ["voice", "v", "m1", "m2", "enc"]
 ---
-Set the track's synth voice and macro control levels. Use `synth;enc` to toggle takeover mode for macro controls with norns encoders 2 and 3.
+Set the track's synth voice with `synth;voice;...`. Use either name (`rikki`) or their number (`2`). The Yggdrasil synth has three different polyphonic voices. You can use all three at once, across any number of tracks. 
 
-The Yggdrasil synth has three different polyphonic voices. You can use all three at once, across any number of tracks. Use either name or their number in combination with `synth;voice;` to set.
+Set the macro control levels with `synth;m1;...` and `synth;m2;...`. You can use this command with `X` to set entire tracks or `X Y` to set individualslots.
+
+Use `synth;enc` to toggle takeover mode for macro controls with norns encoders 2 and 3.
 
 <div class="table-responsive">
   <table class="table">
