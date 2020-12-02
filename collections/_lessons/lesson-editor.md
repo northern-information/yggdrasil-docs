@@ -10,8 +10,9 @@ image: screenshot-editor.png
 - _tab_ and _tab_ + _shift_ cycle through the attributes.
 - _&uarr;_ and _&darr;_ also cycle through the attributes.
 - _mod_ + arrows aborts and moves to adjacent slot.
-- Pressing _enter_ at any time commits a **valid** form.
-- Pressing enter will do nothing to an **invalid** form.
+- Pressing _enter_ at any time commits all **valid** values.
+- Pressing _enter_ will do nothing if **invalid** values are present.
+- Pressing _enter_ will close the editor if all values are **unchanged**.
 - Entries are validated in real-time. Invalid submissions are not allowed.
 - Empty notes and values are valid - it is the same as deleting.
 - YGG and MIDI values update each other.
