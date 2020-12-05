@@ -13,6 +13,7 @@ image: screenshot-editor.png
 - Pressing _enter_ at any time commits all **valid** values.
 - Pressing _enter_ will do nothing if **invalid** values are present.
 - Pressing _enter_ will close the editor if all values are **unchanged**.
+- Pressing _enter_ on the YPC field will open a sample selector window. Pressing _esc_ will abandon the window without any updates. Pressing _enter_ on a new sample will commit the new sample along with other values in the editor.
 - Entries are validated in real-time. Invalid submissions are not allowed.
 - Empty notes and values are valid - it is the same as deleting.
 - YGG and MIDI values update each other.

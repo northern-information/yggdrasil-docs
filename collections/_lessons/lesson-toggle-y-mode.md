@@ -1,5 +1,5 @@
 ---
-weight: 19
+weight: 20
 topic: Toggle Y Mode
 ymode: false
 image: keyboard-toggle-y-mode.png
