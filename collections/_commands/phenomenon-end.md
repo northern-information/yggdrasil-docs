@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 2.01
 name: End
 signatures: ["_X_ _Y_ end"]
 examples: ["1 5 end", "2 4 x"]
